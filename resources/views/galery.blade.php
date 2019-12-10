@@ -2,7 +2,7 @@
 
 @section('title','Gallery | Migunani')
 @section('link')
-	<link rel="stylesheet" href="{{ asset('css/style-galeri.css') }}" >
+	<link rel="stylesheet" href="{{ secure_asset('css/style-galeri.css') }}" >
 @endsection
 
 @section('nav')
@@ -10,7 +10,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="{{ asset('image/logo1.png') }}"   class="nav" alt="">
+            <img src="{{ secure_asset('image/logo1.png') }}"   class="nav" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -144,7 +144,7 @@
 @endsection
 
 @section('script')
-<!-- <script src="{{ asset('js/lightbox.js') }}"></script> -->
+<!-- <script src="{{ secure_asset('js/lightbox.js') }}"></script> -->
 
 <script type="text/javascript">
 
