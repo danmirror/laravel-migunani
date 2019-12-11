@@ -28,7 +28,7 @@
       <script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
 
 
-    <link rel="stylesheet" href="{{asset('css/style.css') }}" >
+    <link rel="stylesheet" href="{{secure_asset('css/style.css') }}" >
 
 
     
