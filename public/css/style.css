@@ -11,6 +11,14 @@ body {
   max-width:150px!important;
 
 }
+@media (max-width: 979px) {
+  
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    position: static;
+  }
+
+}
 
 .nav-item{
   font-weight: bold;
