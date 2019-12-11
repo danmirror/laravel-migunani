@@ -78,12 +78,12 @@
                         <div class="card-body">
                             <p class="card-text  ">
                             @if ($data_file->type =='jpg')
-                                  <img class="img-fluid img-thumbnail" src="{{ Storage::url('data_file/'.$data_file->file) }}" alt="" id="thumnails">  
+                                  <img class="img-fluid img-thumbnail" src="{{ asset('storage/data_file/'.$data_file->file) }}" alt="" id="thumnails">  
                             @endif
 
                             @if ($data_file->type =='mp4') 
                                 <video  class="thumnails-admin img-thumbnail" controls  id="click" >
-                                    <source  src="{{ Storage::url('data_file/'.$data_file->file) }}"  >
+                                    <source  src="{{ asset('storage/data_file/'.$data_file->file) }}"  >
                                 </video>
                             @endif 
                             <h6 class="card-title">{{$data_file->judul}}</h6>
