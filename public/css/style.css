@@ -1,9 +1,11 @@
 html, body {
   height: 100%;
 }
-body {
-  /* display: flex; */
-  flex-direction: column;
+@media(min-width:992px){
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .nav{
