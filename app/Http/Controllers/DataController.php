@@ -93,7 +93,7 @@ class DataController extends Controller
 		$file = $request->file('file');
  
         $nama_file = time()."_".$file->getClientOriginalName();
-        Storage::putFileAs('public',$request->file('file'),$nama_file);
+        $path =Storage::putFileAs('public',$request->file('file'),$nama_file);
         
         
         //kirim ke storage
