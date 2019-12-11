@@ -7,6 +7,8 @@ use App\data;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
+
 
 class DataController extends Controller
 {
@@ -82,17 +84,19 @@ class DataController extends Controller
             
             
         ]);
+       
       
  
 		// menyimpan data file yang diupload ke variabel $file
 		$file = $request->file('file');
  
 		$nama_file = time()."_".$file->getClientOriginalName();
- 
+        
       	        // isi dengan nama folder tempat kemana file diupload
-		$tujuan_upload = 'data_file';
-        $file->move($tujuan_upload,$nama_file);
-
+		// $tujuan_upload = 'data_file';
+        // $file->move($tujuan_upload,$nama_file);
+     
+        Storage::disk('local') -> put('public/data_file'.'/'.$nama_file, file_get_contents($file -> getRealPath()));
 
         //check extensi
         $ekstensi = explode('.',$file->getClientOriginalName());//memecah contoh ['pink.png']=['pink']['png']

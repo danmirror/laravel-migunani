@@ -2,7 +2,7 @@
 
 @section('title','Gallery | Migunani')
 @section('link')
-	<link rel="stylesheet" href="{{ secure_asset('css/style-galeri.css') }}" >
+	<link rel="stylesheet" href="{{ asset('css/style-galeri.css') }}" >
 @endsection
 
 @section('nav')
@@ -50,7 +50,7 @@
 			@if ($data_file->type =='jpg')
 			<div class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-3">
 				<a class="media-thumbnail" data-toggle="modal" data-target="#media" data-slide-to="{{$count_thumb}}">
-					<img src="{{ secure_url('data_file/'.$data_file->file) }}">
+					<img src="{{ Storage::url('data_file/'.$data_file->file) }}">
 				</a>
 			</div>
 			@endif
@@ -59,7 +59,7 @@
 			<div class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-3">
 				<a class="media-thumbnail" data-toggle="modal" data-target="#media" data-slide-to="{{$count_thumb}}">
 					<video>
-						<source src="{{ secure_url('data_file/'.$data_file->file) }}" type="video/mp4">
+						<source src="{{ Storage::url('data_file/'.$data_file->file) }}" type="video/mp4">
 					</video>
 					<div class="playpause"></div>
 				</a>
@@ -100,13 +100,13 @@
 							@if($count_preview==1)
 								@if ($data_file->type =='jpg')
 									<div class="carousel-item active">
-										<img src="{{ secure_url('data_file/'.$data_file->file) }}">
+										<img src="{{ Storage::url('data_file/'.$data_file->file) }}">
 									</div>
 									@endif
 									@if ($data_file->type =='mp4') 
 									<div class="carousel-item active">
 										<video id="carousel-video" controls>
-											<source src="{{ secure_url('data_file/'.$data_file->file) }}" type="video/mp4">
+											<source src="{{ Storage::url('data_file/'.$data_file->file) }}" type="video/mp4">
 										</video>
 									</div>
 									@endif
@@ -114,13 +114,13 @@
 							@if($count_preview>1)
 								@if ($data_file->type =='jpg')
 								<div class="carousel-item ">
-									<img src="{{ secure_url('data_file/'.$data_file->file) }}">
+									<img src="{{ Storage::url('data_file/'.$data_file->file) }}">
 								</div>
 								@endif					
 								@if ($data_file->type =='mp4') 
 								<div class="carousel-item">
 									<video id="carousel-video" controls>
-										<source src="{{ secure_url('data_file/'.$data_file->file) }}" type="video/mp4">
+										<source src="{{ Storage::url('data_file/'.$data_file->file) }}" type="video/mp4">
 									</video>
 								</div>
 								@endif
