@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 use App\user;
 use App\data;
 
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+
 
 
 class DataController extends Controller
@@ -90,14 +92,16 @@ class DataController extends Controller
 		// menyimpan data file yang diupload ke variabel $file
 		$file = $request->file('file');
  
-		$nama_file = time()."_".$file->getClientOriginalName();
+        $nama_file = time()."_".$file->getClientOriginalName();
+        Storage::putFileAs('public',$request->file('file'),$nama_file);
+        
         
         //kirim ke storage
         // Storage::disk('local') -> put('public/data_file'.'/'.$nama_file, file_get_contents($file -> getRealPath()));
-
+        // Storage::disk('local')->put('data_file'.'/'.$nama_file,file_get_contents($file -> getRealPath()));
           // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'data_file';
-        $file->move($tujuan_upload,$nama_file);
+        // $tujuan_upload = 'data_file';
+        // $file->move($tujuan_upload,$nama_file);
         
         //check extensi
         $ekstensi = explode('.',$file->getClientOriginalName());//memecah contoh ['pink.png']=['pink']['png']
