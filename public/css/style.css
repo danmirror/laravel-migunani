@@ -7,8 +7,8 @@ body {
 }
 
 .nav{
-  max-height:100px; 
-  max-width:150px;
+  max-height:100px!important; 
+  max-width:150px!important;
 
 }
 
