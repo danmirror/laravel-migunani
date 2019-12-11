@@ -5,9 +5,9 @@
     <!-- title -->
     <title>@yield('title')</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-    <link rel="shortcut icon"  href="{{ secure_asset('image/logo1.png') }}" >
+    <link rel="shortcut icon"  href="{{asset('image/logo1.png') }}" >
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
 
     <!-- sosmed -->
@@ -28,7 +28,7 @@
       <script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
 
 
-    <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}" >
+    <link rel="stylesheet" href="{{secure_asset('css/style.css') }}" >
 
 
     
@@ -51,7 +51,7 @@
     @yield('content')
 
     <!--footer -->
-    <section class="footer py-3" id="footer">
+    <section class="footer py-3" id="footer" >
         <div class="col-md-12" >
             <div class="mb-3 text-center" >
                 <a href="#" class="fa fa-facebook social"></a>

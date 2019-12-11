@@ -82,17 +82,17 @@
         </div>
         <div class="row">
             <div class="col-4 ">
-            <img src="{{ secure_asset('image/f.png') }}" class="content_img">
+            <img src="{{ asset('image/f.png') }}" class="content_img">
             <h6>Desain Interior</h6>
                
             </div>
             <div class="col-4 ">
-            <img src="{{ secure_asset('image/b.png') }}" class="content_img">
+            <img src="{{ asset('image/b.png') }}" class="content_img">
             <h6>Desain Eksterior</h6>
                 
             </div>
             <div class="col-4 ">
-            <img src="{{ secure_asset('image/a.png') }}" class="content_img">
+            <img src="{{ asset('image/a.png') }}" class="content_img">
             <h6>Desain Komersial</h6>
                   
             </div>

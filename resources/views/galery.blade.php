@@ -8,9 +8,9 @@
 @section('nav')
     
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
         <a class="navbar-brand" href="#">
-            <img src="{{ secure_asset('image/logo1.png') }}"   class="nav" alt="">
+            <img src="{{asset('image/logo1.png') }}"   class="nav" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
 
 
 
-<div class="container pt-3">
+<div class="container pt-3" >
 <h1 class="font-weight-light text-center mt-4 mb-0">Migunani Gallery</h1>
 <hr class="mt-2 mb-5 " style="width:70%;">
 	<div class="row">
@@ -144,7 +144,7 @@
 @endsection
 
 @section('script')
-<!-- <script src="{{ secure_asset('js/lightbox.js') }}"></script> -->
+<!-- <script src="{{ asset('js/lightbox.js') }}"></script> -->
 
 <script type="text/javascript">
 

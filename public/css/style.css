@@ -1,17 +1,12 @@
 html, body {
   height: 100%;
 }
-/* @media(min-width:760px){
+@media(min-width:450px){
   body {
     display: flex;
     flex-direction: column;
   }
-} */
-.container{
-    display: flex;
-    flex-direction: column;
 }
-
 .nav{
   max-height:100px!important; 
   max-width:150px!important;
