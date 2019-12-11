@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- title -->
+    <title>@yield('title')</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link rel="shortcut icon"  href="{{ secure_asset('image/logo1.png') }}" >
@@ -13,8 +16,7 @@
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
     
     
-    <!-- title -->
-    <title>@yield('title')</title>
+ 
      
     <!-- slick -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -23,7 +25,7 @@
     
       <!-- login -->
       <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
-    <script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
+      <script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
 
 
     <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}" >
