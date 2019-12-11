@@ -93,14 +93,14 @@ class DataController extends Controller
 		$file = $request->file('file');
  
         $nama_file = time()."_".$file->getClientOriginalName();
-        $path =Storage::putFileAs('public',$request->file('file'),$nama_file);
+        // $path =Storage::putFileAs('public',$request->file('file'),$nama_file);
         
         
         //kirim ke storage
         // Storage::disk('local') -> put('public/data_file'.'/'.$nama_file, file_get_contents($file -> getRealPath()));
         // Storage::disk('local')->put('data_file'.'/'.$nama_file,file_get_contents($file -> getRealPath()));
         //   isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'data_file';
+        $tujuan_upload = 'storage';
         $file->move($tujuan_upload,$nama_file);
         
         //check extensi
