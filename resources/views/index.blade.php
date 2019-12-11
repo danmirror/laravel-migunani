@@ -3,7 +3,7 @@
 
 @section('nav')
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
         <a class="navbar-brand" href="#">
             <img src="{{ asset('image/logo1.png') }}"    class="nav" alt="">
         </a>
