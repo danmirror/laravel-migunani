@@ -48,37 +48,39 @@
         </div>
       </nav>
           <!-- -->
-      <div class="container-fluid  my-5">
-        @if (session('status'))
-            <div class="alert alert-primary">
-                {{ session('status') }}
-            </div>
-        @endif  
-        <h1 class="mt-4 text-center">Upload File</h1>
-        <hr class="hr-admin">
+      <div class="content-admin create">
+        <div class="container-fluid  my-5">
 
-            <form action="/admin/kirim" method="post"  enctype="multipart/form-data" >
-            @csrf
+          @if (session('status'))
+              <div class="alert alert-primary">
+                  {{ session('status') }}
+              </div>
+          @endif  
+          <h1 class="mt-4 text-center">Upload File</h1>
+          <hr class="hr-admin">
 
-            <div class="form-group card">
-            <label for="file">Foto</label>
-            <input type="file" name="file" class="form-control @error('file') is-invalid @enderror" 
-                id="file" placeholder="masukan foto"  value="{{ old('file') }}">
-                @error('file')<div class="invalid-feedback"> {{$message}} </div> @enderror
-            </div>
+              <form action="/admin/kirim" method="post"  enctype="multipart/form-data" >
+              @csrf
 
-            <div class="form-group card">
-            <label for="judul">masukan caption</label>
-            <input type="text" class="form-control @error('judul') is-invalid @enderror" 
-            id="judul" placeholder="masukan masukan caption" name="judul"  value="{{ old('judul') }}">
-            @error('judul')<div class="invalid-feedback"> {{$message}} </div> @enderror
-            </div>
-            <button type="submit"  class="btn btn-primary">Tambah Data</button>
-            </form>
+              <div class="form-group card">
+              <label for="file">Foto</label>
+              <input type="file" name="file" class="form-control @error('file') is-invalid @enderror" 
+                  id="file" placeholder="masukan foto"  value="{{ old('file') }}">
+                  @error('file')<div class="invalid-feedback"> {{$message}} </div> @enderror
+              </div>
+
+              <div class="form-group card">
+              <label for="judul">masukan caption</label>
+              <input type="text" class="form-control @error('judul') is-invalid @enderror" 
+              id="judul" placeholder="masukan masukan caption" name="judul"  value="{{ old('judul') }}">
+              @error('judul')<div class="invalid-feedback"> {{$message}} </div> @enderror
+              </div>
+              <button type="submit"  class="btn btn-primary">Tambah Data</button>
+              </form>
+        </div>
+    
+      <!-- /#page-content-wrapper -->
       </div>
-   
-    <!-- /#page-content-wrapper -->
-
  
     @endsection
 

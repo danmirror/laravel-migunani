@@ -48,49 +48,51 @@
           </ul>
         </div>
       </nav>
-   
-      <div class="container-fluid  my-2">
-        @if (session('status'))
-            <div class="alert alert-success ">
-                {{ session('status') }}
-            </div>
-        @endif        
-        <h1 class="mt-4 text-center">My Dashboard</h1>
-        <hr class="hr-admin">
-      </div>
-     
-        <?php 
-            $gambar = 0;
-            $video = 0;
-            $file = 0;
-         ?>
-        @foreach($data as $data_file)
-        <?php $file++ ?>
-          @if ($data_file->type =='jpg')
-            <?php  $gambar++; ?>
-          @endif
-          @if($data_file->type =='mp4') 
-            <?php  $video++; ?>
-            @endif
-        @endforeach
-        <div class="row ">
-            <div class="admin-padding" id="file-index">
-              <p  >{{$file}}</p>
-              <h6>File</h6>
-          </div>
-            <div class="admin-padding"   id="gambar">
-              <p  >{{$gambar}}</p>
-              <h6>Gambar</h6>
-          </div>
-            <div class="admin-padding "   id="video">
-              <p >{{$video}}</p>
-              <h6>Video</h6>
-          </div>
+      
+      <div class="content-admin dashboard">
+        <div class="container-fluid  my-2">
+          @if (session('status'))
+              <div class="alert alert-success ">
+                  {{ session('status') }}
+              </div>
+          @endif        
+          <h1 class="mt-4 text-center">My Dashboard</h1>
+          <hr class="hr-admin">
         </div>
-        <!-- chart -->
+      
+          <?php 
+              $gambar = 0;
+              $video = 0;
+              $file = 0;
+          ?>
+          @foreach($data as $data_file)
+          <?php $file++ ?>
+            @if ($data_file->type =='jpg')
+              <?php  $gambar++; ?>
+            @endif
+            @if($data_file->type =='mp4') 
+              <?php  $video++; ?>
+              @endif
+          @endforeach
+          <div class="row ">
+              <div class="admin-padding" id="file-index">
+                <p  >{{$file}}</p>
+                <h6>File</h6>
+            </div>
+              <div class="admin-padding"   id="gambar">
+                <p  >{{$gambar}}</p>
+                <h6>Gambar</h6>
+            </div>
+              <div class="admin-padding "   id="video">
+                <p >{{$video}}</p>
+                <h6>Video</h6>
+            </div>
+          </div>
+          <!-- chart -->
 
-      <div class="my-5 chart-admin">
-        <canvas id="myChart"></canvas>
+        <div class="my-5 chart-admin">
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
     
         
