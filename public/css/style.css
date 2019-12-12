@@ -7,7 +7,7 @@ html, body {
     flex-direction: column;
   }
 }
-@media(max-width:991){
+@media(max-width:991px){
   body>.container {
     min-height: calc(100%-302px);
   }
