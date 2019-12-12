@@ -53,58 +53,62 @@
           </ul>
         </div>
       </nav>
-      <form class="form-inline  mt-2" action="" method="get">
-            <input class="form-control mr-sm-1 ml-auto" type="search" placeholder=" cari judul file" aria-label="Search" name="cari">
-            <button class="btn btn-outline-info  my-sm-1 " type="submit" >CARI</button>
-      </form>
-      <div class="container-fluid ">
-        @if (session('status'))
-            <div class="alert alert-success ">
-                {{ session('status') }}
-            </div>
-        @endif        
-        <h1 class="mt-2 text-center">Overview Admin</h1>
-        <hr class="hr-admin">
-        
-        <!-- cart -->
-        <div class="container"  class="card" id="foot">
-            <div class="row">
-            
-            @foreach($data as $data_file)
-            
-                <div class=" col-sm-6 col-lg-4 col-xl-4 mb-3 ">
-               
-                    <div class="card img-thumbnail" style="width: 18rem;">
-                        <div class="card-body">
-                            <p class="card-text  ">
-                            @if ($data_file->type =='jpg')
-                                  <img class="img-fluid img-thumbnail" src="{{ Storage::url('public/'.$data_file->file) }}" alt="" id="thumnails">  
-                            @endif
+      <div class="content-admin overview">
+        <form class="form-inline  mt-2" action="" method="get">
+              <input class="form-control mr-sm-1 ml-auto" type="search" placeholder=" cari judul file" aria-label="Search" name="cari">
+              <button class="btn btn-outline-info  my-sm-1 " type="submit" >CARI</button>
+        </form>
+    
+        <div class="container-fluid ">
+          @if (session('status'))
+              <div class="alert alert-success ">
+                  {{ session('status') }}
+              </div>
+          @endif        
+          <h1 class="mt-2 text-center">Overview Admin</h1>
+          <hr class="hr-admin">
+          
+          <!-- cart -->
+          <div class="container"  class="card" id="foot">
+              <div class="row">
+              
+              @foreach($data as $data_file)
+              
+                  <div class=" col-sm-6 col-lg-4 col-xl-4 mb-3 ">
+                
+                      <div class="card img-thumbnail" style="width: 18rem;">
+                          <div class="card-body">
+                              <p class="card-text  ">
+                              @if ($data_file->type =='jpg')
+                                    <img class="img-fluid img-thumbnail" src="{{ Storage::url('public/'.$data_file->file) }}" alt="" id="thumnails">  
+                              @endif
 
-                            @if ($data_file->type =='mp4') 
-                                <video  class="thumnails-admin img-thumbnail" controls  id="click" >
-                                    <source  src="{{ Storage::url('public/'.$data_file->file) }}"  >
-                                </video>
-                            @endif 
-                            <h6 class="card-title">{{$data_file->judul}}</h6>
-                            <a href=" {{$data_file->id}}/edit" class="btn btn-info"->edit</a>
+                              @if ($data_file->type =='mp4') 
+                                  <video  class="thumnails-admin img-thumbnail" controls  id="click" >
+                                      <source  src="{{ Storage::url('public/'.$data_file->file) }}"  >
+                                  </video>
+                              @endif 
+                              <h6 class="card-title">{{$data_file->judul}}</h6>
+                              <a href=" {{$data_file->id}}/edit" class="btn btn-info"->edit</a>
 
-                            <form action=" {{$data_file->id}} " method="post" class="d-inline">
-                            @method('delete')
-                            @csrf
-                                <button onclick="return confirm('yakin data ingin di hapus?');" type="submit" class="btn btn-danger" >delete</button>
-                            </form>
-                            
-                            <a href="/admin" class="card-link">kembali</a>
+                              <form action=" {{$data_file->id}} " method="post" class="d-inline">
+                              @method('delete')
+                              @csrf
+                                  <button onclick="return confirm('yakin data ingin di hapus?');" type="submit" class="btn btn-danger" >delete</button>
+                              </form>
+                              
+                              <a href="/admin" class="card-link">kembali</a>
 
-                        </div>
-                    </div>
-                </div>
-        
-            @endforeach
-            </div>
+                          </div>
+                      </div>
+                  </div>
+          
+              @endforeach
+              </div>
+          </div>
+          <!-- endcart -->
         </div>
-        <!-- endcart -->
+
       </div>
 
     @endsection

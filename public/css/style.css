@@ -31,7 +31,7 @@ html, body {
 		min-height: calc(100% - 217px);
 	}
 }
-
+/* selesai */
 @media(max-width: 991px) {
  
 	body>.container {
