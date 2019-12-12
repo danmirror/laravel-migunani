@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
-
+use JWTAuth;
+use Tymon\JWTAuth\Exceptions\JWTException;
 
 
 class DataController extends Controller
