@@ -7,14 +7,13 @@ html, body {
     flex-direction: column;
   }
 }
-@media(max-width:991px){
-  body>.container {
-    min-height: calc(100%-302px);
-  }
-  body>.container-fluid {
-    min-height: calc(100%-398px);
-  }
-    
+@media (max-width: 991px) {
+	body>.container {
+		min-height: calc(100% - 302px);
+	}
+	body>.container-fluid {
+		min-height: calc(100% - 398px);
+	}
 }
 .nav{
   max-height:100px!important; 
