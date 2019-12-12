@@ -8,11 +8,15 @@ html, body {
   }
 }
 @media(max-width: 991px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
 	body>.container {
-		min-height: calc(100% - 277px)!important;
+		min-height: calc(100% - 277px);
 	}
 	body>.container-fluid {
-		min-height: calc(100% - 398px)!important;
+		min-height: calc(100% - 398px);
 	}
 }
 .nav{
