@@ -12,7 +12,7 @@ html, body {
     min-height: calc(100%-302px);
   }
   body>.container-fluid {
-    min-height: calc(100%-3982px);
+    min-height: calc(100%-398px);
   }
     
 }
