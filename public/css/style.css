@@ -9,10 +9,10 @@ html, body {
 }
 @media(max-width: 991px) {
 	body>.container {
-		min-height: calc(100% - 277px);
+		min-height: calc(100% - 277px)!important;
 	}
 	body>.container-fluid {
-		min-height: calc(100% - 398px);
+		min-height: calc(100% - 398px)!important;
 	}
 }
 .nav{
