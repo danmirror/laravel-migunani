@@ -42,4 +42,4 @@ Route::get('/logout','UserController@logout');
 
 // dd($url);
 
- });
+//  });
