@@ -42,7 +42,9 @@ class DataController extends Controller
         }
         $cari = $request->cari;
         $data = data::where('judul','like',"%".$cari."%")->orderBy('id','DESC')->paginate();
-        
+
+        // $rawData =Storage::disk('google')->get($request->file);
+        // dd($rawData);
         return view('admin.overview',compact('data'));
     }
     public function galery(Request $request)
@@ -100,14 +102,22 @@ class DataController extends Controller
         //kirim ke storage
         // Storage::disk('local') -> put('public/data_file'.'/'.$nama_file, file_get_contents($file -> getRealPath()));
         // Storage::disk('local')->put('data_file'.'/'.$nama_file,file_get_contents($file -> getRealPath()));
+
         //   isi dengan nama folder tempat kemana file diupload
         $tujuan_upload = 'storage';
         $file->move($tujuan_upload,$nama_file);
+
+
+        // kirim google drive
+        // Storage::disk('google')->put($nama_file, file_get_contents($file -> getRealPath()));
         
         //check extensi
         $ekstensi = explode('.',$file->getClientOriginalName());//memecah contoh ['pink.png']=['pink']['png']
 	    $ekstensi_file=strtolower(end($ekstensi));
-
+        
+        // $rawData =Storage::disk('google')->url($nama_file);
+        // $url = $disk->url($nama_file);
+        // dd( $url);
    
 
         data::Create([

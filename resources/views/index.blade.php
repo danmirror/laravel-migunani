@@ -41,13 +41,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{asset('image/interior.jpg') }}" class="d-block banner" alt="...">
+      <img src="{{asset('image/3.png') }}" class="d-block banner" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{asset('image/interior3.jpg') }}" class="d-block banner" alt="...">
+      <img src="{{asset('image/4.png') }}" class="d-block banner" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{{asset('image/modern.jpg') }}" class="d-block banner" alt="...">
+      <img src="{{asset('image/5.png') }}" class="d-block banner" alt="...">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

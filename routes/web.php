@@ -32,3 +32,14 @@ Route::post('/login/kirim','UserController@login');
 Route::get('/regist','UserController@create');
 Route::post('/regist/kirim','UserController@store');
 Route::get('/logout','UserController@logout');
+
+
+// Route::get('test', function() {
+//     // $disk =  Storage::disk('google');
+//     // $disk = $disk->copy('coba.txt','new/coba.txt');
+//     //  dd($disk);
+//     $url = Storage::disk('google')->url('coba.txt');
+
+// dd($url);
+
+ });
