@@ -7,16 +7,27 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">
         <img src="{{ asset('image/logo1.png') }}" width="200px" alt="">
       </div>
-      <div class="list-group ">
-        <a href="/admin" class="list-group-item list-group-item-action bg-light ">Dashboard</a>
-        <a href="/" class="list-group-item list-group-item-action bg-light">Web</a>
-        <a href="/admin/create" class="list-group-item list-group-item-action bg-light ">Post</a>
-        <a href="/admin/overview" class="list-group-item list-group-item-action bg-light ">Overview</a>
-        
+      <div class="list-group list-group-flush">
+        <a href="/admin" class="list-group-item list-group-item-action bg-light icon-sidebar"> 
+            <i class="fas fa-tachometer-alt " ></i>
+            Dashboard
+        </a>
+        <a href="/" class="list-group-item list-group-item-action bg-light icon-sidebar">
+            <i class="fab fa-chrome " ></i>
+            Web
+        </a>
+        <a  href="/admin/create" class="list-group-item list-group-item-action bg-light icon-sidebar">
+            <i class="fas fa-cloud-upload-alt"></i>
+            Post
+        </a>
+        <a href="/admin/overview" class="list-group-item list-group-item-action bg-light icon-sidebar">
+        <i class="fas fa-cog"></i>
+            Overview
+        </a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -25,7 +36,9 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Menu</button>
+        <button  id="menu-toggle">
+          <i class="fas fa-sliders-h"></i>
+        </button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -36,7 +49,8 @@
             
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Admin
+                  <i class="far fa-user"></i>
+                  Admin
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <p class="dropdown-item" > Migunani</p>

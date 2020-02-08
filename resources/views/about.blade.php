@@ -46,11 +46,13 @@
             Kami berkomitmen untuk selalu memberikan yang terbaik bagi semua pelanggan</p>
             <div class="row" >
                 <div class="col-md-8 mx-5 mb-5 mt-2 about" > 
-                    <div class="fa fa-facebook">   migunani arch</div><br>
-                    <div class="fa fa-instagram"> migunaniarchitect</div><br>
-                    <div class="fa fa-twitter"> archmigunani</div><br>
-                    <div class="fa fa-whatsapp  mt-3"> 085225832895</div><br>
-                    <div class="fa fa-home"> Turgenen, Sumberagung, Kec. Moyudan, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55563</div><br>
+                    <div class="fab fa-facebook-f">   migunani arch</div><br>
+                    <div class="fab fa-instagram"> migunaniarchitect</div><br>
+                    <div class="fab fa-twitter"> archmigunani</div><br>
+                    <div class="fab fa-whatsapp  mt-3"> 085225832895</div><br>
+                    <div > <i class="fas fa-home"></i>
+                        Turgenen, Sumberagung, Kec. Moyudan, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55563
+                    </div><br>
                    
                    
                 </div>

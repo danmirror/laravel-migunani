@@ -5,7 +5,7 @@
 <!-- login -->
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
 
-<link rel="stylesheet" href="{{ secure_asset('css/style-login.css') }}" >
+<link rel="stylesheet" href="{{ asset('css/style-login.css') }}" >
 @endsection
 
 @section('nav')
@@ -13,7 +13,7 @@
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="{{ secure_asset('image/logo1.png') }}"   style="max-height:150px;max-width:150px;margin-top:10px;" class="nav">
+            <img src="{{asset('image/logo1.png') }}"   style="max-height:150px;max-width:150px;margin-top:10px;" class="nav">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -197,5 +197,5 @@
 @endsection
 
 @section('script')
-    <script src="{{ secure_asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
 @endsection
