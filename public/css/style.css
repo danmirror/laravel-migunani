@@ -258,13 +258,16 @@ html, body {
   font-size: 40px;
 }
 #file-index{
-    background-color: rgb(253, 133, 133);
+    /* background-color: rgb(253, 133, 133); */
+    border :3px solid #333;
 }
 #gambar{
-  background-color: rgb(107, 206, 245);
+  /* background-color: rgb(107, 206, 245); */
+  border :3px solid #333;
 }
 #video{
-  background-color: rgb(78, 154, 184);
+  /* background-color: rgb(78, 154, 184); */
+  border :3px solid #333;
 }
 .chart-admin{
   width: 800px;
@@ -374,4 +377,16 @@ iframe{
     height: 30rem;
     object-fit: cover;
     }
+}
+
+.icon-sidebar:hover{
+  
+  color: rgb(59, 91, 152);
+
+  /* color:rgb(54, 160, 202); */
+}
+#menu-toggle{
+  border : 0px solid #333;
+  border-radius: 3px;
+  font-size:25px;
 }
