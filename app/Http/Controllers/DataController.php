@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 use App\user;
 use App\data;
+use File;
 
-use Illuminate\Http\File;
+// use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -93,11 +94,16 @@ class DataController extends Controller
       
  
 		// menyimpan data file yang diupload ke variabel $file
-		$file = $request->file('file');
- 
+        $file = $request->file('file');
+        
+        // $file = resize(100,100);
+        
         $nama_file = time()."_".$file->getClientOriginalName();
         // $path =Storage::putFileAs('public',$request->file('file'),$nama_file);
         
+        
+        // $destinationPath = public_path('/images');
+        // $image->move($destinationPath, $input['imagename']);
         
         //kirim ke storage
         // Storage::disk('local') -> put('public/data_file'.'/'.$nama_file, file_get_contents($file -> getRealPath()));
@@ -105,6 +111,7 @@ class DataController extends Controller
 
         //   isi dengan nama folder tempat kemana file diupload
         $tujuan_upload = 'storage';
+        
         $file->move($tujuan_upload,$nama_file);
 
 
@@ -179,6 +186,11 @@ class DataController extends Controller
      */
     public function destroy(data $data)
     {
+        // delete file
+        $file = data::where('id',$data->id)->first();
+        File::delete('storage/'.$file->file);
+
+        // delete data
         data::destroy($data->id);
         return redirect('/admin/overview')->with('status','Data berhasil dihapus');
     }

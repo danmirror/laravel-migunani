@@ -38,9 +38,13 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button  id="menu-toggle">
-          <i class="fas fa-sliders-h"></i>  
-        </button>
+        <div id="sidebarCollapse" >
+          <!-- <i class="fas fa-align-left"></i> -->
+          <!-- Sidebar -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -127,11 +131,10 @@
 
     @section('script')
     <script>
-      
-      
-        $("#menu-toggle").click(function(e) {
+       $("#sidebarCollapse").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
-        });
+        $('#sidebarCollapse').toggleClass('open');
+      });
     </script>
     @endsection
