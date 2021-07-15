@@ -129,9 +129,9 @@ button.close {
     color: #fff;
     text-shadow: none;
 }
-.text {
+.text-thumb {
     /* display: block; */
-    /* width: 100px; */
+    /* width: 150px; */
     font-size: 14px;
     overflow: hidden;
     white-space: nowrap;
@@ -139,6 +139,7 @@ button.close {
   }
 .text-display {
     /* display: block; */
+    font-size: 14px;
     color:white!important;
     overflow: hidden;
     white-space: nowrap;
