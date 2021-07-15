@@ -1,6 +1,22 @@
 html, body {
   height: 100%;
 }
+.text-thumb {
+  /* display: block; */
+  /* width: 150px; */
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.text-display {
+  /* display: block; */
+  font-size: 14px;
+  color:white!important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 @media(min-width:1024px){
   body {
     display: flex;
