@@ -70,7 +70,7 @@
                 <p>085225832895</p>
             </div>
         </div>
-        <div class="mx-5 tags">
+        <div class="mx-4 tags">
             <p class="mb-0 text-center"> &copy;  2019-<?php echo date("Y")?> | Migunani Architect. All right reserved </p>
         </div>
     </section>

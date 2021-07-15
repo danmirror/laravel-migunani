@@ -101,6 +101,10 @@ html, body {
     /* min-height: 510px; */
     margin-top:20px;
 }
+.footer .tags{
+    padding: 0 1em;
+  
+  }
 
 /* media social */
 .social {
@@ -151,10 +155,7 @@ html, body {
     font-size: 25px;
     width: 80%;
   }
-  .footer .tags{
-    font-size: 14px!important;
   
-  }
 }
 
 /* The Close Button */
