@@ -2,6 +2,22 @@
     display: flex;
     height: 100vh;
 } */
+.text-thumb {
+    /* display: block; */
+    /* width: 150px; */
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.text-display {
+    /* display: block; */
+    font-size: 14px;
+    color:white!important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 .container {
     margin: auto;
 }
@@ -129,19 +145,3 @@ button.close {
     color: #fff;
     text-shadow: none;
 }
-.text-thumb {
-    /* display: block; */
-    /* width: 150px; */
-    font-size: 14px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-.text-display {
-    /* display: block; */
-    font-size: 14px;
-    color:white!important;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
