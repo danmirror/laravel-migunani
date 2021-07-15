@@ -38,7 +38,7 @@
 
 @section('container')
 <div class="container">
-<h1 class="font-weight-light text-center mt-4 mb-0">About Us</h1>
+<h2 class="font-weight-light text-center mt-4 mb-0">About Us</h2>
 <hr class="mt-2 mb-5 " style="width:70%;">
     <div class="row">
         <p style="text-align:center"> Migunani architect adalah jasa di bidang bangunan baik hunian maupun bangunan komersil. 

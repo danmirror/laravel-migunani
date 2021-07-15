@@ -69,7 +69,7 @@
     <div class="container bg-white text-dark text-center ">   
         <div class="row" >
                <div class="col-sm-12 text-center">
-                <h1 >Migunani Architect</h1>
+                <h2 >Migunani Architect</h2>
                 <hr style="width:60%; border: 1px solid ;">
             </div>
         </div>

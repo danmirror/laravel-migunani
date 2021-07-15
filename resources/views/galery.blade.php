@@ -41,7 +41,7 @@
 
 
 <div class="container pt-3" >
-<h1 class="font-weight-light text-center mt-4 mb-0">Migunani Gallery</h1>
+<h2 class="font-weight-light text-center mt-4 mb-0">Migunani Gallery</h2>
 <hr class="mt-2 mb-5 " style="width:70%;">
 	<div class="row">
 		<?php $count_thumb = 0;?>
