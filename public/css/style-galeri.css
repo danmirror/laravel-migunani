@@ -139,7 +139,7 @@ button.close {
   }
 .text-display {
     /* display: block; */
-    color:white;
+    color:white!important;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
