@@ -6,28 +6,30 @@
    
   <div class="d-flex" id="wrapper">
 
+    
     <!-- Sidebar -->
-      <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="bg-light " id="sidebar-wrapper">
       <div class="sidebar-heading">
         <img src="{{ asset('image/logo1.png') }}" width="200px" alt="">
       </div>
       <div class="list-group list-group-flush">
-        <a href="/admin" class="list-group-item list-group-item-action bg-light icon-sidebar"> 
+        <a href="/admin" class="list-group-item list-group-item-action icon-sidebar "> 
             <i class="fas fa-tachometer-alt " ></i>
             Dashboard
         </a>
-        <a href="/" class="list-group-item list-group-item-action bg-light icon-sidebar">
+        <a href="/" class="list-group-item list-group-item-action  icon-sidebar">
             <i class="fab fa-chrome " ></i>
             Web
         </a>
-        <a  href="/admin/create" class="list-group-item list-group-item-action bg-light icon-sidebar">
+        <a  href="/admin/create" class="list-group-item list-group-item-action  icon-sidebar sidebar-color-active">
             <i class="fas fa-cloud-upload-alt"></i>
             Post
         </a>
-        <a href="/admin/overview" class="list-group-item list-group-item-action bg-light icon-sidebar">
+        <a href="/admin/overview" class="list-group-item list-group-item-action icon-sidebar">
         <i class="fas fa-cog"></i>
             Overview
         </a>
+        
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -35,7 +37,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
         <div id="sidebarCollapse" >
           <!-- <i class="fas fa-align-left"></i> -->
           <!-- Sidebar -->
@@ -57,9 +59,12 @@
                   Admin
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <p class="dropdown-item" > Migunani</p>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="/logout">Log Out</a>
+                <a class="dropdown-item icon-hover" href="/logout">
+                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M16.56,5.44L15.11,6.89C16.84,7.94 18,9.83 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12C6,9.83 7.16,7.94 8.88,6.88L7.44,5.44C5.36,6.88 4,9.28 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12C20,9.28 18.64,6.88 16.56,5.44M13,3H11V13H13" />
+                  </svg>
+                Logout
+                </a>
               </div>
             </li>
           </ul>
@@ -74,10 +79,10 @@
                   {{ session('status') }}
               </div>
           @endif  
-          <h1 class="mt-4 text-center">Upload File</h1>
-          <hr class="hr-admin">
+          <h2 class="mt-4 text-center">Upload</h2>
+          <hr class="hr-admin mb-5">
 
-              <form action="/admin/kirim" method="post"  enctype="multipart/form-data" >
+            <form action="/admin/kirim" method="post"  enctype="multipart/form-data" >
               @csrf
 
               <div class="form-group card">
@@ -93,8 +98,8 @@
               id="judul" placeholder="masukan masukan caption" name="judul"  value="{{ old('judul') }}">
               @error('judul')<div class="invalid-feedback"> {{$message}} </div> @enderror
               </div>
-              <button type="submit"  class="btn btn-primary">Tambah Data</button>
-              </form>
+              <button type="submit"  class="btn btn-outline-secondary">Tambah Data</button>
+            </form>
         </div>
     
       <!-- /#page-content-wrapper -->

@@ -54,8 +54,8 @@ html, body {
 }
 
 @media(min-width:768px){
-  .nav{
-    margin-left: 25%;
+  .navbar{
+    margin-left: .5em;
   }
   .content_img{
     height:150px; 
@@ -112,9 +112,9 @@ html, body {
   margin: 5px 2px;
 }
 
-.social:hover {
+.icon-hover:hover {
     opacity: 0.7;
-    color:rgb(54, 160, 202);
+    color:#b28fe5;
 }
 
 /* The Modal (background) */
@@ -184,6 +184,7 @@ html, body {
   }
   
   #sidebar-wrapper {
+    box-shadow: 2px 0px 5px 2px #cecece;
     min-height: 100vh;
     margin-left: -15rem;
     -webkit-transition: margin .25s ease-out;
@@ -259,15 +260,15 @@ html, body {
 }
 #file-index{
     /* background-color: rgb(253, 133, 133); */
-    border :3px solid #333;
+    border :3px solid rgb(182, 182, 182);
 }
 #gambar{
   /* background-color: rgb(107, 206, 245); */
-  border :3px solid #333;
+  border :3px solid rgb(182, 182, 182);
 }
 #video{
   /* background-color: rgb(78, 154, 184); */
-  border :3px solid #333;
+  border :3px solid rgb(182, 182, 182);
 }
 .chart-admin{
   width: 800px;
@@ -395,8 +396,8 @@ iframe{
 }
 
 .icon-sidebar:hover{
-  
-  color: rgb(59, 91, 152);
+  color: white;
+  background-color: #b28fe5!important;
 
   /* color:rgb(54, 160, 202); */
 }
@@ -411,6 +412,10 @@ iframe{
 
 
 /* =============menubar============== */
+.sidebar-color-active{
+  color: white;
+  background-color: #7952b3!important;
+}
 
 /* Icon 1 */
 

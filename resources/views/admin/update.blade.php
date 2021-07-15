@@ -36,7 +36,7 @@
 <div class="container" id="foot">
     <div class="row">
         <div class="col-6">
-            <h1 class="mt-2" >Form Edit</h1>
+            <h2 class="mt-2" >Form Edit</h2>
 
             <form action="/admin/{{$data->id}}" method="post">
                 @method('patch')

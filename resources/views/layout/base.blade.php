@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   
+    <meta name="author" content="Danu andrean">
+    <meta name="description" content="migunani website">
+    <meta name="keywords" content="architecture">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- title -->
     <title>@yield('title')</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <link rel="shortcut icon"  href="{{asset('image/logo1.png') }}" >
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
 
@@ -33,11 +37,6 @@
 
     <link rel="stylesheet" href="{{asset('css/style.css') }}" >
 
-
-    
-
-    
-
     <!-- new slick -->
 
     @yield('link')
@@ -57,10 +56,11 @@
     <section class="footer py-3" id="footer" >
         <div class="col-md-12" >
             <div class="mb-3 text-center" >
-                <a href="#" class="fab fa-facebook-f social"></a>
-                <a href="#" class="fab fa-twitter fab fa-hashtag social"></a>
-                <a href="https://www.instagram.com/migunaniarchitect/?hl=id" class="fab fa-instagram social"></a>
-                <div class="fab fa-whatsapp social" id="myBtn" ></div>
+                <a href="https://www.facebook.com/migunani.arch" class="fab fa-facebook-f social icon-hover"></a>
+                <a href="https://twitter.com/ArchMigunani" class="fab fa-twitter fab fa-hashtag social icon-hover"></a>
+                <a href="https://www.instagram.com/migunaniarchitect/?hl=id" class="fab fa-instagram social icon-hover"></a>
+                <a href="https://api.whatsapp.com/send?phone=085225832895" class="fab fa-whatsapp social icon-hover" ></a>
+                <!-- <div class="fab fa-whatsapp social icon-hover" id="myBtn" ></div> -->
             <div>
         </div>
         <div id="myModal" class="modal-foot">
