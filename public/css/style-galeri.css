@@ -129,3 +129,18 @@ button.close {
     color: #fff;
     text-shadow: none;
 }
+.text {
+    /* display: block; */
+    /* width: 100px; */
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+.text-display {
+    /* display: block; */
+    color:white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }

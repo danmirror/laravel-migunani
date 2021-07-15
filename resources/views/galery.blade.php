@@ -52,7 +52,7 @@
 				<a class="media-thumbnail" data-toggle="modal" data-target="#media" data-slide-to="{{$count_thumb}}">
 					<img src="{{ asset('storage/'.$data_file->file) }}">
 				</a>
-				<h6 class="card-title text-center my-2">{{$data_file->judul}}</h6>
+				<h6 class="card-title text-center my-2 text">{{$data_file->judul}}</h6>
 			</div>
 			@endif
 
@@ -64,7 +64,7 @@
 					</video>
 					<div class="playpause"></div>
 				</a>
-				<h6 class="card-title text-center my-2">{{$data_file->judul}}</h6>
+				<h6  class="card-title text-center my-2 text ">{{$data_file->judul}}</h6>
 			</div>
 			@endif
 			<?php $count_thumb++;?>
@@ -103,6 +103,7 @@
 								@if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
 									<div class="carousel-item active">
 										<img src="{{ asset('storage/'.$data_file->file) }}">
+										<h6 class="card-title color-white my-2 text-display">{{$data_file->judul}}</h6>
 									</div>
 									@endif
 									@if($data_file->type =='mp4' || $data_file->type =='3gp') 
@@ -110,6 +111,7 @@
 										<video id="carousel-video" controls>
 											<source src="{{ asset('storage/'.$data_file->file) }}" type="video/mp4">
 										</video>
+										<h6 class="card-title text-center my-2 text-display">{{$data_file->judul}}</h6>
 									</div>
 									@endif
 								@endif
@@ -117,12 +119,14 @@
 								@if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
 								<div class="carousel-item ">
 									<img src="{{ asset('storage/'.$data_file->file) }}">
+									<h6 class="card-title color-white my-2 text-display">{{$data_file->judul}}</h6>
 								</div>
 								@endif					
 								@if($data_file->type =='mp4' || $data_file->type =='3gp') 
 								<div class="carousel-item">
 									<video id="carousel-video" controls>
 										<source src="{{ asset('storage/'.$data_file->file) }}" type="video/mp4">
+										<h6 class="card-title text-center my-2 text-display">{{$data_file->judul}}</h6>
 									</video>
 								</div>
 								@endif
