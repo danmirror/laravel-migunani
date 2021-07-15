@@ -152,7 +152,7 @@ html, body {
     width: 80%;
   }
   .footer .tags{
-    font-size: 14px;
+    font-size: 14px!important;
   
   }
 }
