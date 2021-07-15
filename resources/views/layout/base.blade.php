@@ -59,7 +59,7 @@
                 <a href="https://www.facebook.com/migunani.arch" class="fab fa-facebook-f social icon-hover"></a>
                 <a href="https://twitter.com/ArchMigunani" class="fab fa-twitter fab fa-hashtag social icon-hover"></a>
                 <a href="https://www.instagram.com/migunaniarchitect/?hl=id" class="fab fa-instagram social icon-hover"></a>
-                <a href="https://api.whatsapp.com/send?phone=085225832895" class="fab fa-whatsapp social icon-hover" ></a>
+                <a href="https://api.whatsapp.com/send?phone=6285225832895" class="fab fa-whatsapp social icon-hover" ></a>
                 <!-- <div class="fab fa-whatsapp social icon-hover" id="myBtn" ></div> -->
             <div>
         </div>

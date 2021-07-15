@@ -73,7 +73,7 @@
                 <hr style="width:60%; border: 1px solid ;">
             </div>
         </div>
-        <div class="row my-3">
+        <div class="row my-4">
             <div class="col-sm-12 ">
                 <p>Migunani architect adalah jasa di bidang bangunan baik hunian maupun bangunan komersil. 
             Kami melayani jasa di bidang desain dan pelasanaan, interior, eksterior dan landscape. 
