@@ -2,8 +2,7 @@
 
 @section('title','Gallery | Migunani')
 @section('link')
-
-	<link rel="stylesheet" href="{{ asset('css/style-galeri.css') }}" >
+<link rel="stylesheet" href="{{ asset('css/style-galeri.css') }}" >
 @endsection
 
 @section('nav')
