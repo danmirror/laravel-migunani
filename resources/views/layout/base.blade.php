@@ -70,7 +70,7 @@
                 <p>085225832895</p>
             </div>
             </div>
-        <p class="mb-0 text-center"> &copy;Copyright 2019 | built by. Migunani Architect</p>
+        <p class="mb-0 text-center">Copyright &copy;  2019-<?php echo date("Y")?> | Migunani Architect. All right reserved </p>
           </section>
     <!-- endfooter -->
 
