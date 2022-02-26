@@ -50,11 +50,14 @@ class DataController extends Controller
     }
     public function galery(Request $request)
     {
-        $cari = $request->cari;
+        $cari = $request->kategori;
         
-        $data = data::where('judul','like',"%".$cari."%")->orderBy('id','DESC')->paginate();
+        $data = data::where('kategori','like',"%".$cari."%")->orderBy('id','DESC')->paginate();
         
-        return view('/galery',compact('data'));
+        return view('/galery',[
+            'data' => $data,
+            'kategori' => $cari
+        ]);
     }
     public function about(Request $request)
     {   
@@ -88,10 +91,8 @@ class DataController extends Controller
             'file' => 'required|mimes:mp4,3gp,jpg,jpeg,png',
             'judul'=>'required',
             
-            
         ]);
-       
-      
+    //    dd($request->kategori);
  
 		// menyimpan data file yang diupload ke variabel $file
         $file = $request->file('file');
@@ -129,9 +130,10 @@ class DataController extends Controller
 
         data::Create([
          
-            'file'=>$nama_file,
-            'judul'=>$request->judul,
-            'type'=>$ekstensi_file
+            'file'      =>$nama_file,
+            'judul'     =>$request->judul,
+            'kategori'  => $request->kategori,
+            'type'      =>$ekstensi_file
         ]);
 
      
@@ -170,8 +172,9 @@ class DataController extends Controller
     public function update(Request $request,  $data)
     {
         //model di atas harus di hapus
-        $datas = data::find($data);
-        $datas->judul = $request->judul;   
+        $datas              = data::find($data);
+        $datas->judul       = $request->judul;   
+        $datas->kategori    = $request->kategori;
         $datas->save();
 
        

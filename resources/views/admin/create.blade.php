@@ -37,7 +37,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+      <nav class="navbar navbar-expand navbar-light bg-light shadow">
         <div id="sidebarCollapse" >
           <!-- <i class="fas fa-align-left"></i> -->
           <!-- Sidebar -->
@@ -45,10 +45,6 @@
           <span></span>
           <span></span>
         </div>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
@@ -72,34 +68,48 @@
       </nav>
           <!-- -->
       <div class="content-admin create">
-        <div class="container-fluid  my-5">
+        <div class="container-fluid  my-3">
 
           @if (session('status'))
               <div class="alert alert-primary">
                   {{ session('status') }}
               </div>
           @endif  
-          <h2 class="mt-4 text-center">Upload</h2>
-          <hr class="hr-admin mb-5">
-
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+              <li class="breadcrumb-item">Upload</a></li>
+            </ol>
+          </nav>
+          <h2 >Upload</h2>
+          <div class="container shadow">
             <form action="/admin/kirim" method="post"  enctype="multipart/form-data" >
               @csrf
 
-              <div class="form-group card">
+              <div class="form-group">
               <label for="file">Foto</label>
               <input type="file" name="file" class="form-control @error('file') is-invalid @enderror" 
                   id="file" placeholder="masukan foto"  value="{{ old('file') }}">
                   @error('file')<div class="invalid-feedback"> {{$message}} </div> @enderror
               </div>
-
-              <div class="form-group card">
-              <label for="judul">masukan caption</label>
-              <input type="text" class="form-control @error('judul') is-invalid @enderror" 
-              id="judul" placeholder="masukan masukan caption" name="judul"  value="{{ old('judul') }}">
-              @error('judul')<div class="invalid-feedback"> {{$message}} </div> @enderror
+              
+              <div class="form-group">
+                <label for="judul">Masukan caption</label>
+                <input type="text" class="form-control @error('judul') is-invalid @enderror" 
+                id="judul" placeholder="masukan masukan caption" name="judul"  value="{{ old('judul') }}">
+                @error('judul')<div class="invalid-feedback"> {{$message}} </div> @enderror
               </div>
-              <button type="submit"  class="btn btn-outline-secondary">Tambah Data</button>
+              <div class="form-group">
+                <label for="judul">Pilih Kategori</label>
+                <select name="kategori" class="custom-select">
+                  <option selected value="interior">Interior</option>
+                  <option value="eksterior">Eksterior</option>
+                  <option value="komersial">Komersial</option>
+                </select>
+              </div>
+              <button type="submit"  class="btn btn-outline-secondary mb-3">Tambah Data</button>
             </form>
+          </div>
         </div>
     
       <!-- /#page-content-wrapper -->

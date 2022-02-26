@@ -76,6 +76,9 @@
     </section>
     <!-- endfooter -->
 
+    <!-- end div page-content-wrapper -->
+    </div>
+
     <script>
         var modal = document.getElementById("myModal");
 
@@ -86,9 +89,9 @@
         var span = document.getElementsByClassName("close-no")[0];
 
         // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-        modal.style.display = "block";
-        }
+        // btn.onclick = function() {
+        // modal.style.display = "block";
+        // }
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {

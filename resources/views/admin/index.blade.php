@@ -37,18 +37,14 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
-            <div id="sidebarCollapse" >
-              <!-- <i class="fas fa-align-left"></i> -->
-              <!-- Sidebar -->
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <nav class="navbar navbar-expand navbar-light bg-light shadow">
+        <div id="sidebarCollapse" >
+          <!-- <i class="fas fa-align-left"></i> -->
+          <!-- Sidebar -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
@@ -72,14 +68,18 @@
       </nav>
       
       <div class="content-admin dashboard">
-        <div class="container-fluid  my-2">
+        <div class="container-fluid  my-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+            </ol>
+          </nav>
           @if (session('status'))
               <div class="alert alert-success ">
                   {{ session('status') }}
               </div>
           @endif        
-          <h2 class="mt-4 text-center"> Dashboard</h2>
-          <hr class="hr-admin mb-5">
+          <h2 class="my-4 "> Dashboard</h2>
         </div>
       
           <?php 
@@ -116,10 +116,6 @@
           <canvas id="myChart"></canvas>
         </div>
       </div>
-    
-        
-      
-   
 
     @endsection
 

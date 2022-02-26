@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->string('judul');
             $table->string('file');
+            $table->string('kategori');
             $table->string('type');
             $table->timestamps();
         });

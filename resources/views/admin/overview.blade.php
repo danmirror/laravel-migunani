@@ -38,7 +38,7 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+      <nav class="navbar navbar-expand navbar-light bg-light shadow">
         <div id="sidebarCollapse" >
           <!-- <i class="fas fa-align-left"></i> -->
           <!-- Sidebar -->
@@ -46,11 +46,6 @@
           <span></span>
           <span></span>
         </div>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             
@@ -72,20 +67,25 @@
           </ul>
         </div>
       </nav>
-      <div class="content-admin overview">
-        <form class="form-inline  mt-2 mr-3" action="" method="get">
-            <input class="form-control mr-sm-1 ml-auto" type="search" placeholder=" cari judul file" aria-label="Search" name="cari">
-            <button class="btn btn-outline-info  my-sm-1 " type="submit" >CARI</button>
-        </form>
-    
-        <div class="container-fluid ">
+      <div class="content-admin overview ">
+        
+        <div class="container-fluid my-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+              <li class="breadcrumb-item">Overview</a></li>
+            </ol>
+          </nav>
+          <h2 class="mt-2">Overview </h2>
+          <form class="form-inline  mt-2 mr-3" action="" method="get">
+              <input class="form-control mr-1 ml-auto search" type="search" placeholder=" cari judul file" aria-label="Search" name="cari">
+              <button class="btn btn-outline-info  my-sm-1 " type="submit" >CARI</button>
+          </form>
           @if (session('status'))
               <div class="alert alert-success ">
                   {{ session('status') }}
               </div>
           @endif        
-          <h2 class="mt-2 text-center">Overview </h2>
-          <hr class="hr-admin mb-5">
           
           <!-- cart -->
           <div class="container"  class="card" id="foot">
@@ -107,7 +107,8 @@
                                       <source  src="{{ Storage::url('public/'.$data_file->file) }}"  >
                                   </video>
                               @endif 
-                              <h6 class="card-title text-center">{{$data_file->judul}}</h6>
+                              <h6 class="card-title text-center mb-0">{{$data_file->judul}}</h6>
+                              <h6 class="card-kategori text-center">{{$data_file->kategori}}</h6>
                               <div class="row justify-content-center">
                                 <div class="col-4">
                                 <a href=" {{$data_file->id}}/edit" class="btn btn-outline-info ">Edit</a>

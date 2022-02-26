@@ -41,8 +41,35 @@
 
 
 <div class="container pt-3" >
-<h2 class="font-weight-light text-center mt-4 mb-0">Migunani Gallery</h2>
+<h2 class="font-weight-light text-center mb-0">Migunani Gallery</h2>
 <hr class="mt-2 mb-5 " style="width:70%;">
+
+	<div class="container">
+		<?php if($kategori== "interior"): ?>
+		<a class="btn btn-outline-secondary mb-4" href="/galery"> All</a>
+		<a class="btn btn-info mb-4" href="?kategori=interior"> Interior</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=eksterior"> Eksterior</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=komersial"> komersial</a>
+
+		<?php elseif($kategori== "eksterior"): ?>
+		<a class="btn btn-outline-secondary mb-4" href="/galery"> All</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=interior"> Interior</a>
+		<a class="btn btn-info mb-4" href="?kategori=eksterior"> Eksterior</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=komersial"> komersial</a>
+
+		<?php elseif($kategori== "komersial"): ?>
+		<a class="btn btn-outline-secondary mb-4" href="/galery"> All</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=interior"> Interior</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=eksterior"> Eksterior</a>
+		<a class="btn btn-info mb-4" href="?kategori=komersial"> komersial</a>
+		
+		<?php else:?>
+		<a class="btn btn-secondary mb-4" href="/galery"> All</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=interior"> Interior</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=eksterior"> Eksterior</a>
+		<a class="btn btn-outline-info mb-4" href="?kategori=komersial"> komersial</a>
+		<?php endif ?>
+	</div>
 	<div class="row">
 		<?php $count_thumb = 0;?>
 		@foreach($data as $data_file)

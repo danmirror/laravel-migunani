@@ -2,33 +2,32 @@
 @section('title',' Home | Migunani ')
 
 @section('nav')
-    
-    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
-        <a class="navbar-brand" href="#">
-            <img src="{{ asset('image/logo1.png') }}"    class="nav" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav ml-auto">
-            @if (Session('login'))
-            <li class="nav-item" >
-                <a class="nav-link " href="/admin">Admin <span class="sr-only">(current)</span></a>
-            </li>
-        @endif
+<nav class="navbar navbar-expand-lg fixed-top"  id=scrolls>
+    <a class="navbar-brand" href="#">
+        <img src="{{ asset('image/logo1.png') }}"    class="nav" alt="" id=img-scroll>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav ml-auto">
+        @if (Session('login'))
         <li class="nav-item" >
-            <a class="nav-link active " href="/">Home</a>
+            <a class="nav-link " href="/admin">Admin <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item" >
-            <a class="nav-link "  href="/galery">Gallery</a>
-        </li>
-        <li class="nav-item" >
-            <a class="nav-link"  href="/about">About</a>
-        </li>
-        </ul>
-      </div>
-    </nav>
+    @endif
+    <li class="nav-item" >
+        <a class="nav-link active " href="/">Home</a>
+    </li>
+    <li class="nav-item" >
+        <a class="nav-link "  href="/galery">Gallery</a>
+    </li>
+    <li class="nav-item" >
+        <a class="nav-link"  href="/about">About</a>
+    </li>
+    </ul>
+  </div>
+</nav>
 @endsection
 
 @section('jumbotron')
@@ -101,6 +100,28 @@
 </div>
 @endsection
 
+@section('script')
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 600) {
+        document.getElementById('scrolls').classList.add('nav-scroll');
+        document.getElementById('img-scroll').classList.add('nav-img-scroll');
+        document.getElementById('img-scroll').classList.remove('nav');
+        // add padding top to show content behind navbar
+        // navbar_height = document.querySelector('.navbar').offsetHeight;
+        // document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('scrolls').classList.remove('nav-scroll');
+        document.getElementById('img-scroll').classList.remove('nav-img-scroll');
+        document.getElementById('img-scroll').classList.add('nav');
+         // remove padding top from body
+        // document.body.style.paddingTop = '0';
+      } 
+  });
+}); 
+</script>
+@endsection
 
 
 
