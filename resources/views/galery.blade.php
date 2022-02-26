@@ -8,38 +8,35 @@
 @section('nav')
     
     
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-        <a class="navbar-brand" href="#">
-            <img src="{{asset('image/logo1.png') }}"   class="nav" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav ml-auto">
-            @if (Session('login'))
-            <li class="nav-item" >
-                <a class="nav-link " href="/admin">Admin<span class="sr-only">(current)</span></a>
-            </li>
-            @endif
-        <li class="nav-item" >
-            <a class="nav-link " href="/">Home</a>
-        </li>
-        <li class="nav-item" >
-            <a class="nav-link active"  href="/galery">Gallery</a>
-        </li>
-        <li class="nav-item" >
-            <a class="nav-link"  href="/about">About</a>
-        </li>
-        </ul>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+	<a class="navbar-brand" href="#">
+		<img src="{{asset('image/logo1.png') }}"   class="nav" alt="">
+	</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		<ul class="navbar-nav ml-auto">
+			@if (Session('login'))
+			<li class="nav-item" >
+					<a class="nav-link " href="/admin">Admin<span class="sr-only">(current)</span></a>
+			</li>
+			@endif
+			<li class="nav-item" >
+					<a class="nav-link " href="/">Home</a>
+			</li>
+			<li class="nav-item" >
+					<a class="nav-link active"  href="/galery">Gallery</a>
+			</li>
+			<li class="nav-item" >
+					<a class="nav-link"  href="/about">About</a>
+			</li>
+		</ul>
+	</div>
 </nav>
 @endsection
 
 @section('container')
-
-
-
 <div class="container pt-3" >
 <h2 class="font-weight-light text-center mb-0">Migunani Gallery</h2>
 <hr class="mt-2 mb-5 " style="width:70%;">
