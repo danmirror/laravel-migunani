@@ -35,7 +35,7 @@
 
 @section('jumbotron')
 
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleIndicators" class="carousel carousel-home slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -124,102 +124,39 @@
 		</div>
 		<div class=" mb-5">
 			<div class="row">
-				<div class="col-6  col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
+<?php $count_thumb = 0;?>
+@foreach($data as $data_file)
+				
+	@if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
+					<div class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-3">
+						<div class="container-galery">
+							<a class="media-thumbnail" data-toggle="modal" data-target="#media" data-slide-to="{{$count_thumb}}">
+								<img src="{{ asset('storage/'.$data_file->file) }}" class="image-galery">
+							</a>
+							<div class="middle-galery">
+								<div class="text-galery">{{$data_file->judul}}</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
+	@endif
+	@if($data_file->type =='mp4' || $data_file->type =='3gp') 
+					<div class="col-6 col-sm-6 col-lg-3 col-xl-3 mb-3">
+						<div class="container-galery">
+							<a class="media-thumbnail" data-toggle="modal" data-target="#media" data-slide-to="{{$count_thumb}}">
+								<video class="image-galery">
+									<source src="{{ asset('storage/'.$data_file->file) }}" type="video/mp4" >
+								</video>
+								<div class="playpause"></div>
+							</a>
+							<div class="middle-galery">
+								<div class="text-galery">{{$data_file->judul}}</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 	
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 	
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 	
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 	
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 	
-				<div class="col-6 col-sm-3 mb-2">
-					<div class="container-galery">
-						<img src="{{asset('image/3.png') }}" alt="Avatar" class="image-galery" >
-						<div class="middle-galery">
-							<div class="text-galery">John Doe</div>
-						</div>
-					</div>
-				</div> 	
+	@endif
+<?php $count_thumb++;?>
+@endforeach
+
 			</div>
 			<div class="text-center">
 				<a class="arrow-tag" href="/galery">
@@ -231,7 +168,83 @@
 			</div>
 
 		</div>
+
+		<!-- modal -->
+		<div class="galery modal fade and carousel slide" id="media" tabindex="-1" role="dialog" aria-labelledby="media" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered mw-100 m-0" role="document">
+				<div class="modal-content align-items-center vh-100">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="modal-body d-flex align-items-center mb-5">
+						<div id="media-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+							<ol class="galery carousel-indicators">
+<?php $count_indicator= 0;?>
+@foreach($data as $data_file)
+<?php $count_indicator++;	?>
+@if($count_indicator==1)
+								<li data-target="#media-carousel" data-slide-to="{{ $count_indicator}}" class="active"></li>
+@endif
+@if($count_indicator>1)
+								<li data-target="#media-carousel" data-slide-to="{{ $count_indicator}}"></li>
+@endif
+									
+@endforeach
+							</ol>
+							<div class="carousel-inner">
+<?php $count_preview = 0;?>
+
+@foreach($data as $data_file)
+<?php $count_preview++;	?>
+@if($count_preview==1)
+@if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
+								<div class="galery carousel-item active">
+									<img src="{{ asset('storage/'.$data_file->file) }}">
+									<h6 class="  text-display card-title color-white my-2">{{$data_file->judul}}</h6>
+								</div>
+@endif
+@if($data_file->type =='mp4' || $data_file->type =='3gp') 
+								<div class="galery carousel-item active">
+									<video id="carousel-video" controls>
+										<source src="{{ asset('storage/'.$data_file->file) }}" type="video/mp4">
+									</video>
+									<h6 class="text-display card-title text-center my-2 ">{{$data_file->judul}}</h6>
+								</div>
+@endif
+@endif
+@if($count_preview>1)
+@if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
+								<div class="galery carousel-item ">
+									<img src="{{ asset('storage/'.$data_file->file) }}">
+									<h6 class="card-title color-white my-2 text-display">{{$data_file->judul}}</h6>
+								</div>
+@endif					
+@if($data_file->type =='mp4' || $data_file->type =='3gp') 
+								<div class="galery carousel-item">
+									<video id="carousel-video" controls>
+										<source src="{{ asset('storage/'.$data_file->file) }}" type="video/mp4">
+										<h6 class="card-title text-center my-2 text-display">{{$data_file->judul}}</h6>
+									</video>
+								</div>
+@endif
+@endif
+@endforeach
+							</div>
+							<a class="galery carousel-control-prev" href="#media-carousel" role="button" data-slide="prev">
+								<span class="galery carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="galery carousel-control-next" href="#media-carousel" role="button" data-slide="next">
+								<span class="galery carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
+
 	<section class="layer-gray" id="harga">
 		<div class="row" >
 			<div class="col-sm-12 text-center mt-5">
@@ -457,6 +470,23 @@
 @section('script')
 
 <script>
+	// Pause video when sliding
+	$('#media-carousel').on('slide.bs.carousel', function () {
+		const video = $(this).find('.carousel-inner .active video');
+		if(video.length) {
+			video.get(0).pause();
+		}
+	});
+
+	// Click backdrop to close
+	$(document).click(function(e){
+		if ( $('.modal.and.carousel').hasClass('show') ) {
+			if ( $(e.target).closest('#media-carousel>*').length > 0 ) {
+				return true;
+			};
+			$('button.close').click();
+		};
+	});
 
 	document.addEventListener("DOMContentLoaded", function(){
 		window.addEventListener('scroll', function() {

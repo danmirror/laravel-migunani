@@ -38,9 +38,11 @@
 @endsection
 
 @section('container')
-	<div class="container pt-3" >
-	<h2 class="font-weight-light text-center mb-0">Migunani Gallery</h2>
-	<hr class="mt-2 mb-5 " style="width:70%;">
+	<div class="container pt-3 mt-5" >
+		<div class="col-sm-12 text-center mt-5">
+			<h3><strong>Galeri</strong></h3>
+			<hr class="hr-home">
+		</div>
 
 		<div class="container">
 			<?php if($kategori== "interior"): ?>
@@ -98,7 +100,7 @@
 		</div>
 	</div>
 
-	<div class="modal fade and carousel slide" id="media" tabindex="-1" role="dialog" aria-labelledby="media" aria-hidden="true">
+	<div class="galery modal fade and carousel slide" id="media" tabindex="-1" role="dialog" aria-labelledby="media" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered mw-100 m-0" role="document">
 			<div class="modal-content align-items-center vh-100">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -126,13 +128,13 @@
 								<?php $count_preview++;	?>
 								@if($count_preview==1)
 									@if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
-										<div class="carousel-item active">
+										<div class="galery carousel-item active">
 											<img src="{{ asset('storage/'.$data_file->file) }}">
 											<h6 class="  text-display card-title color-white my-2">{{$data_file->judul}}</h6>
 										</div>
 										@endif
 										@if($data_file->type =='mp4' || $data_file->type =='3gp') 
-										<div class="carousel-item active">
+										<div class="galery carousel-item active">
 											<video id="carousel-video" controls>
 												<source src="{{ asset('storage/'.$data_file->file) }}" type="video/mp4">
 											</video>
@@ -142,13 +144,13 @@
 									@endif
 								@if($count_preview>1)
 									@if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
-									<div class="carousel-item ">
+									<div class="galery carousel-item ">
 										<img src="{{ asset('storage/'.$data_file->file) }}">
 										<h6 class="card-title color-white my-2 text-display">{{$data_file->judul}}</h6>
 									</div>
 									@endif					
 									@if($data_file->type =='mp4' || $data_file->type =='3gp') 
-									<div class="carousel-item">
+									<div class="galery carousel-item">
 										<video id="carousel-video" controls>
 											<source src="{{ asset('storage/'.$data_file->file) }}" type="video/mp4">
 											<h6 class="card-title text-center my-2 text-display">{{$data_file->judul}}</h6>
@@ -158,12 +160,12 @@
 								@endif
 							@endforeach
 						</div>
-						<a class="carousel-control-prev" href="#media-carousel" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<a class="galery carousel-control-prev" href="#media-carousel" role="button" data-slide="prev">
+							<span class="galery carousel-control-prev-icon" aria-hidden="true"></span>
 							<span class="sr-only">Previous</span>
 						</a>
-						<a class="carousel-control-next" href="#media-carousel" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<a class="galery carousel-control-next" href="#media-carousel" role="button" data-slide="next">
+							<span class="galery carousel-control-next-icon" aria-hidden="true"></span>
 							<span class="sr-only">Next</span>
 						</a>
 					</div>

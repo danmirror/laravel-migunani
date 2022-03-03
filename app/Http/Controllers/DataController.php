@@ -21,10 +21,13 @@ class DataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        
-        return view('index');
+        $cari = $request->cari;
+        $data = data::where('judul','like',"%".$cari."%")->orderBy('id','DESC')->paginate(12);
+        return view('index',[
+            'data' => $data
+        ]);
     }
     public function admin(Request $request)
     {
