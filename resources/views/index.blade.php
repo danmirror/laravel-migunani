@@ -410,7 +410,7 @@
 	<section class="mb-4" id="tentang">
 		<div class="row" >
 			<div class="col-sm-12 text-center mt-5">
-				<h3><strong>Kontak</strong></h3>
+				<h3><strong>Tentang</strong></h3>
 				<hr class="hr-home">
 			</div>
 		</div>
@@ -462,6 +462,65 @@
 				</div>
 			</div>
 		
+		</div>
+
+		<div class="container body">
+			<div class="row" >
+				<div class="col-sm-12 text-center mt-5">
+					<h4><strong>FAQ</strong></h4>
+					<hr class="hr-home">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<h5>Hal Yang Sering Ditanyakan</h5>
+					<div class="tabs">
+						<div class="tab">
+							<input class="accordion" type="checkbox" id="chck1">
+							<label class="tab-label mb-0" for="chck1">Apakah Benar bisa Mulai Tanpa DP?</label>
+							<div class="tab-content">
+							ya benar, kami akan langsung mengerjakan denah sesuai dengan kebutuhan Anda. sedangkan untuk DP NYA bisa Anda berikan setelah Anda mendapatkan hasil awal berupa Denah, dan sesuai dengan keinginan serta kebtuhan Anda.
+							</div>
+						</div>
+						<div class="tab">
+							<input class="accordion" type="checkbox" id="chck2">
+							<label class="tab-label mb-0" for="chck2">Bagaimana Sistem Pembayarannya?</label>
+							<div class="tab-content">
+							Setelah kami mengerjakan Denah Rencana serta berapa biaya pembuatannya sampai selesai dengan paket yang Anda ambil, Luas bangunan dan kerumitan desain. Setelah anda setuju maka di lakukan pembayaran pertama berupa <b>DP 30%</b>, selanjut nya jika desain denah, Eksterior, Interior di setujui lanjut pembayaran <b>30%</b> , untuk pelunasan <b>40%</b> setelah semua produk selesai di kerjakan.
+							</div>
+						</div>
+						<div class="tab">
+							<input class="accordion" type="checkbox" id="chck3">
+							<label class="tab-label mb-0" for="chck3">Bagaimana jika ingin melakukan pemesanan?</label>
+							<div class="tab-content">
+							Pemesanan dapat di lakukan via Whatshapp. Nomer sudah tertera di website atau Anda bisa klik tombol whatshapp.
+							</div>
+						</div>
+						<div class="tab">
+							<input class="accordion" type="checkbox" id="chck4">
+							<label class="tab-label mb-0" for="chck4">Data apa saja yang perlu saya berikan?</label>
+							<div class="tab-content">
+							Data yang kami butuhkan adalah Sketsa lahan yang akan di bangun, serta arah mata angin mana bangunan akan di arahkan / muka bangunan dan foto-foto kondisi lahan.
+							</div>
+						</div>
+						<div class="tab">
+							<input class="accordion" type="checkbox" id="chck5">
+							<label class="tab-label mb-0" for="chck5">Apakah Bisa Di Revisi Sampai Sesuai Keinginan?</label>
+							<div class="tab-content">
+							Ya, kami bersaha semaksimal mungkin agar desain yang kami buat sesuai dan tepat dengan keinginan serta kebutuhan Anda. Selama pembeli melakukan pembayaran tepat waktu sesuai progres yang sudah kami kerjakan, maka kami akan dengan senang hati memberika hasil maksimal.
+							</div>
+						</div>
+						<div class="tab">
+							<input class="accordion" type="checkbox" id="chck6">
+							<label class="tab-label mb-0" for="chck6">Masih ada pertanyaan yang belum terjawab?</label>
+							<div class="tab-content">
+							Hubungi kami via Whatshapp, kami akan dengan senang hati melayani anda.
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 @include('layout.foot')

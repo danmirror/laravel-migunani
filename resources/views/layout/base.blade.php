@@ -5,7 +5,7 @@
 	
 	<meta name="author" content="Danu andrean">
 	<meta name="description" content="migunani website">
-	<meta name="keywords" content="architecture">
+	<meta name="keywords" content="architecture jasa arsitek">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- title -->
@@ -28,7 +28,7 @@
 	<!-- login -->
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 	<script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
-	
+		
 
 	<link rel="stylesheet" href="{{asset('css/main.css') }}" >
 

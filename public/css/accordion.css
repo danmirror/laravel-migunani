@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.body {
+  padding: 0 1em 1em;
+}
+
+input.accordion{
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.row {
+  display: flex;
+}
+.row .col {
+  flex: 1;
+}
+.row .col:last-child {
+  margin-left: 1em;
+
+  /* background-color: beige; */
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  /* background: #2c3e50; */
+  font-weight: bold;
+  cursor: pointer;
+  color: rgb(163, 163, 163);
+  /* Icon */
+}
+.tab-label:hover {
+  background: #ffe797;
+}
+.tab-label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  margin-left: 1em;
+  color: #757474;
+  background: rgb(247, 247, 247);
+  transition: all 0.35s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  /* background: #2c3e50; */
+  cursor: pointer;
+}
+
+
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
