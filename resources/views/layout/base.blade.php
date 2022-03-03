@@ -17,7 +17,6 @@
 	<!-- sosmed -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!--icon  -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 	
 	
@@ -30,54 +29,23 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 	<script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
 	
-	<!-- icon -->
-	<!-- <script src="https://kit.fontawesome.com/54c8a0a75f.js" crossorigin="anonymous"></script> -->
-
-
 
 	<link rel="stylesheet" href="{{asset('css/main.css') }}" >
-
-	<!-- new slick -->
 
 	@yield('link')
     
 </head>
 <body>
-  
+
 @yield('nav')
-    
+  
 	<!-- --jumbotro-- -->
-	@yield('jumbotron')
+@yield('jumbotron')
 	
-	@yield('container')
-	@yield('content')
+@yield('container')
+@yield('content')
 
-	<!--footer -->
-	<section class="footer py-3" id="footer" >
-		<div class="col-md-12" >
-			<div class="mb-3 text-center" >
-				<a href="https://www.facebook.com/migunani.arch" class="fab fa-facebook-f social icon-hover"></a>
-				<a href="https://twitter.com/ArchMigunani" class="fab fa-twitter fab fa-hashtag social icon-hover"></a>
-				<a href="https://www.instagram.com/migunaniarchitect/?hl=id" class="fab fa-instagram social icon-hover"></a>
-				<a href="https://api.whatsapp.com/send?phone=6285225832895" class="fab fa-whatsapp social icon-hover" ></a>
-				<!-- <div class="fab fa-whatsapp social icon-hover" id="myBtn" ></div> -->
-				<div id="myModal" class="modal-foot">
-					<!-- Modal content -->
-					<div class="modal-content-foot">
-						<span class="close-no">&times;</span>
-						<p>085225832895</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="mx-4 tags">
-			<p class="mb-0 text-center"> &copy;  2019-<?php echo date("Y")?> | Migunani Architect. All right reserved </p>
-		</div>
-	</section>
-    <!-- endfooter -->
 
-	<!-- end div page-content-wrapper -->
-<!-- </div> -->
 
 <script>
 	var modal = document.getElementById("myModal");
@@ -94,9 +62,9 @@
 	// }
 
 	// When the user clicks on <span> (x), close the modal
-	span.onclick = function() {
-	modal.style.display = "none";
-	}
+	// span.onclick = function() {
+	// modal.style.display = "none";
+	// }
 
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {

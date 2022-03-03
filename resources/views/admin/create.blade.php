@@ -4,34 +4,33 @@
 
 @section('container')
    
-  <div class="d-flex" id="wrapper">
+	<div class="d-flex" id="wrapper">
 
-    
-    <!-- Sidebar -->
-    <div class="bg-light " id="sidebar-wrapper">
-      <div class="sidebar-heading">
-        <img src="{{ asset('image/logo1.png') }}" width="200px" alt="">
-      </div>
-      <div class="list-group list-group-flush">
-        <a href="/admin" class="list-group-item list-group-item-action icon-sidebar "> 
-            <i class="fas fa-tachometer-alt " ></i>
-            Dashboard
-        </a>
-        <a href="/" class="list-group-item list-group-item-action  icon-sidebar">
-            <i class="fab fa-chrome " ></i>
-            Web
-        </a>
-        <a  href="/admin/create" class="list-group-item list-group-item-action  icon-sidebar sidebar-color-active">
-            <i class="fas fa-cloud-upload-alt"></i>
-            Post
-        </a>
-        <a href="/admin/overview" class="list-group-item list-group-item-action icon-sidebar">
-        <i class="fas fa-cog"></i>
-            Overview
-        </a>
-        
-      </div>
-    </div>
+		<!-- Sidebar -->
+		<div class="bg-light " id="sidebar-wrapper">
+			<div class="sidebar-heading">
+				<img src="{{ asset('image/logo1.png') }}" width="200px" alt="">
+			</div>
+			<div class="list-group list-group-flush">
+				<a href="/admin" class="list-group-item list-group-item-action icon-sidebar "> 
+						<i class="fas fa-tachometer-alt " ></i>
+						Dashboard
+				</a>
+				<a href="/" class="list-group-item list-group-item-action  icon-sidebar">
+						<i class="fab fa-chrome " ></i>
+						Web
+				</a>
+				<a  href="/admin/create" class="list-group-item list-group-item-action  icon-sidebar sidebar-color-active">
+						<i class="fas fa-cloud-upload-alt"></i>
+						Post
+				</a>
+				<a href="/admin/overview" class="list-group-item list-group-item-action icon-sidebar">
+				<i class="fas fa-cog"></i>
+						Overview
+				</a>
+				
+			</div>
+		</div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
@@ -70,11 +69,11 @@
       <div class="content-admin create">
         <div class="container-fluid  my-3">
 
-          @if (session('status'))
+@if (session('status'))
               <div class="alert alert-primary">
-                  {{ session('status') }}
+{{ session('status') }}
               </div>
-          @endif  
+@endif  
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
@@ -114,16 +113,19 @@
     
       <!-- /#page-content-wrapper -->
       </div>
+@include('layout.foot')
+
+</div>
  
-    @endsection
+@endsection
 
 
-    @section('script')
-    <script>
-      $("#sidebarCollapse").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        $('#sidebarCollapse').toggleClass('open');
-      });
-    </script>
-    @endsection
+@section('script')
+<script>
+	$("#sidebarCollapse").click(function(e) {
+		e.preventDefault();
+		$("#wrapper").toggleClass("toggled");
+		$('#sidebarCollapse').toggleClass('open');
+	});
+</script>
+@endsection

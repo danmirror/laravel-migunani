@@ -1,7 +1,34 @@
 
 .carousel{
 	margin-top: 0px;
+  background-color: blanchedalmond;
 }
 .card{
   margin-top:30px;
+}
+
+.nav{
+  max-height:670px!important; 
+  max-width:150px!important;
+}
+
+.nav-img-scroll{
+  max-height:50px!important; 
+  max-width:150px!important;
+}
+/* .nav-item a{
+  color: rgb(250, 203, 49)!important;
+} */
+.nav-scroll{
+  background-color: white;
+}
+.nav-item{
+  font-weight: bold;
+}
+
+@media(max-width:560px){
+  .nav{
+    max-height:50px!important; 
+    max-width:150px!important;
+  }
 }

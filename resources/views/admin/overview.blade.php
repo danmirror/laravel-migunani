@@ -133,16 +133,19 @@
         </div>
 
       </div>
+@include('layout.foot')
 
-    @endsection
+  </div>
+
+@endsection
 
 
-    @section('script')
-    <script>
-       $("#sidebarCollapse").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        $('#sidebarCollapse').toggleClass('open');
-      });
-    </script>
-    @endsection
+@section('script')
+<script>
+    $("#sidebarCollapse").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+    $('#sidebarCollapse').toggleClass('open');
+  });
+</script>
+@endsection
