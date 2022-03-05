@@ -477,14 +477,14 @@
 					<div class="tabs">
 						<div class="tab">
 							<input class="accordion" type="checkbox" id="chck1">
-							<label class="tab-label mb-0" for="chck1">Apakah Benar bisa Mulai Tanpa DP?</label>
+							<label class="tab-label mb-0" for="chck1">Apakah benar bisa mulai tanpa DP?</label>
 							<div class="tab-content">
 							ya benar, kami akan langsung mengerjakan denah sesuai dengan kebutuhan Anda. sedangkan untuk DP NYA bisa Anda berikan setelah Anda mendapatkan hasil awal berupa Denah, dan sesuai dengan keinginan serta kebtuhan Anda.
 							</div>
 						</div>
 						<div class="tab">
 							<input class="accordion" type="checkbox" id="chck2">
-							<label class="tab-label mb-0" for="chck2">Bagaimana Sistem Pembayarannya?</label>
+							<label class="tab-label mb-0" for="chck2">Bagaimana sistem pembayarannya?</label>
 							<div class="tab-content">
 							Setelah kami mengerjakan Denah Rencana serta berapa biaya pembuatannya sampai selesai dengan paket yang Anda ambil, Luas bangunan dan kerumitan desain. Setelah anda setuju maka di lakukan pembayaran pertama berupa <b>DP 30%</b>, selanjut nya jika desain denah, Eksterior, Interior di setujui lanjut pembayaran <b>30%</b> , untuk pelunasan <b>40%</b> setelah semua produk selesai di kerjakan.
 							</div>
@@ -505,7 +505,7 @@
 						</div>
 						<div class="tab">
 							<input class="accordion" type="checkbox" id="chck5">
-							<label class="tab-label mb-0" for="chck5">Apakah Bisa Di Revisi Sampai Sesuai Keinginan?</label>
+							<label class="tab-label mb-0" for="chck5">Apakah bisa di revisi sampai sesuai keinginan?</label>
 							<div class="tab-content">
 							Ya, kami bersaha semaksimal mungkin agar desain yang kami buat sesuai dan tepat dengan keinginan serta kebutuhan Anda. Selama pembeli melakukan pembayaran tepat waktu sesuai progres yang sudah kami kerjakan, maka kami akan dengan senang hati memberika hasil maksimal.
 							</div>
@@ -523,12 +523,47 @@
 			</div>
 		</div>
 	</section>
+
+	<div id="msg" hidden>
+      <p class="my-1 mx-1">Silahkan konsultasi dengan kami...</p>
+	</div>
+	<div id="promo" hidden>
+      <p class="my-1 mx-1">Dapatkan <b>promo</b> menarik dari kami!</p>
+	</div>
+	<a href="https://api.whatsapp.com/send?phone=6285225832895" id="fixedbutton">
+		<svg class="icon-redirect" viewBox="0 0 24 24">
+			<path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 14C16.31 13.86 15.09 13.26 14.87 13.18C14.64 13.1 14.5 13.06 14.31 13.3C14.15 13.55 13.67 14.11 13.53 14.27C13.38 14.44 13.24 14.46 13 14.34C12.74 14.21 11.94 13.95 11 13.11C10.26 12.45 9.77 11.64 9.62 11.39C9.5 11.15 9.61 11 9.73 10.89C9.84 10.78 10 10.6 10.1 10.45C10.23 10.31 10.27 10.2 10.35 10.04C10.43 9.87 10.39 9.73 10.33 9.61C10.27 9.5 9.77 8.26 9.56 7.77C9.36 7.29 9.16 7.35 9 7.34C8.86 7.34 8.7 7.33 8.53 7.33Z" />
+		</svg>
+	</a>
+
 @include('layout.foot')
 @endsection
 
 @section('script')
 
 <script>
+	
+	// message time
+	setTimeout(() => {
+		document.getElementById('msg').removeAttribute("hidden");
+		document.getElementById('msg').classList.add('msg');
+	}, 2000); 
+	setTimeout(() => {
+		document.getElementById('promo').removeAttribute("hidden");
+		document.getElementById('promo').classList.add('promo');
+	}, 8000); 
+
+	setTimeout(() => {
+		document.getElementById('msg').setAttribute("hidden", false);
+		document.getElementById('msg').classList.remove('msg');
+	}, 15000);
+	setTimeout(() => {
+		document.getElementById('promo').setAttribute("hidden", false);
+		document.getElementById('promo').classList.remove('promo');
+	}, 20000);
+
+
+
 	// Pause video when sliding
 	$('#media-carousel').on('slide.bs.carousel', function () {
 		const video = $(this).find('.carousel-inner .active video');
@@ -553,6 +588,7 @@
 				document.getElementById('scrolls').classList.add('nav-scroll');
 				document.getElementById('img-scroll').classList.add('nav-img-scroll');
 				document.getElementById('img-scroll').classList.remove('nav');
+				document.getElementById('fixedbutton').classList.add('fixedbutton');
 				// add padding top to show content behind navbar
 				// navbar_height = document.querySelector('.navbar').offsetHeight;
 				// document.body.style.paddingTop = navbar_height + 'px';
@@ -560,6 +596,7 @@
 				document.getElementById('scrolls').classList.remove('nav-scroll');
 				document.getElementById('img-scroll').classList.remove('nav-img-scroll');
 				document.getElementById('img-scroll').classList.add('nav');
+				document.getElementById('fixedbutton').classList.remove('fixedbutton');
 					// remove padding top from body
 				// document.body.style.paddingTop = '0';
 			} 

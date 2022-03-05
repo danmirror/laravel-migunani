@@ -19,6 +19,43 @@ h1,h2,h3,h4,h5{
   font-family: 'Spartan', sans-serif;
 }
 
+.msg{
+  position: fixed;
+  bottom: 12em;
+  right: 5em;
+  background-color: #fddc79;
+  border-radius: 20px;
+  font-size: 16px;
+}
+.promo{
+  position: fixed;
+  bottom: 11em;
+  right: 5em;
+  background-color: #ffb443;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.fixedbutton {
+  position: fixed;
+  bottom: 5em;
+  right: 5em;
+}
+.fixedbutton .icon-redirect{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  width: 3em;
+  background-color: rgb(62, 161, 49);
+  border-radius: 30%;
+  padding: 3px;
+}
+.fixedbutton .icon-redirect:hover{
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
 blockquote:before {
 	color: #ccc;
 	content: open-quote;
@@ -140,6 +177,19 @@ p{
 }
 
 @media(max-width:560px){
+  .msg{
+    bottom: 9em;
+    right: 2em;
+  }
+  .promo{
+    bottom: 8em;
+    right: 2em;
+  }
+  .fixedbutton {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+  }
   .navbar-collapse{
     background-color: white;
     border-radius: 10px;
@@ -278,13 +328,4 @@ p{
 }
 
 
-.icon-sidebar:hover{
-  color: black;
-  background-color: rgb(241, 241, 241)!important;
-  /* color:rgb(54, 160, 202); */
-}
-#menu-toggle{
-  border : 0px solid #333;
-  border-radius: 3px;
-  font-size:25px;
-}
+
