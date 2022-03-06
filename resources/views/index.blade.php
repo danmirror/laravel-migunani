@@ -132,10 +132,10 @@
 						<div class="container-galery">
 							<a class="media-thumbnail" data-toggle="modal" data-target="#media" data-slide-to="{{$count_thumb}}">
 								<img src="{{ asset('storage/'.$data_file->file) }}" class="image-galery">
+								<div class="middle-galery">
+									<div class="text-galery">{{$data_file->judul}}</div>
+								</div>
 							</a>
-							<div class="middle-galery">
-								<div class="text-galery">{{$data_file->judul}}</div>
-							</div>
 						</div>
 					</div>
 	@endif
@@ -147,10 +147,10 @@
 									<source src="{{ asset('storage/'.$data_file->file) }}" type="video/mp4" >
 								</video>
 								<div class="playpause"></div>
+								<div class="middle-galery">
+									<div class="text-galery">{{$data_file->judul}}</div>
+								</div>
 							</a>
-							<div class="middle-galery">
-								<div class="text-galery">{{$data_file->judul}}</div>
-							</div>
 						</div>
 					</div>
 	@endif
