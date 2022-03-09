@@ -94,7 +94,7 @@
 							<hr class="hr-home">
 					</div>
 				</div>
-			<div class="container "> 
+			</div> 
 			<div class="row text-center">
 				<div class="col-md-4 ">
 					<img src="{{ asset('image/interior2.jpg') }}" class="content_img">
@@ -126,7 +126,7 @@
 				</div>
 			</div>
 		</div>
-		<div class=" mb-5">
+		<div class="container mb-5">
 			<div class="row">
 <?php $count_thumb = 0;?>
 @foreach($data as $data_file)
@@ -421,7 +421,7 @@
 					<hr class="hr-home">
 				</div>
 			</div>
-	</div>
+		</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
