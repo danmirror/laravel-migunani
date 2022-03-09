@@ -121,10 +121,6 @@ iframe{
 		width: 400px !important;
 		height: 650px !important;
 	}
-
-	.about{
-		margin-left: 9rem!important;
-	}
 	
 }
 
@@ -201,7 +197,7 @@ iframe{
 }
 .galery.carousel-control-next-icon, .galery.carousel-control-prev-icon {
 	width: 15px;
-height: 15px;
+	height: 15px;
 }
 .galery.carousel-control-next-icon:focus, .galery.carousel-control-prev-icon:focus {
 	outline: none;
@@ -239,8 +235,7 @@ height: 15px;
 }
 @media (max-width: 575px) {
 	.galery.carousel-item>* {
-		max-width: 350px;
-		max-height: 150px;
+		width: 100%;
 	}
 	.media-thumbnail>* {
 		width: 100%;

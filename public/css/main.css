@@ -156,7 +156,9 @@ p{
   /* .navbar{
     margin-left: .5em;
   } */
-  
+  .about{
+		margin-left: 9rem!important;
+	}
   .zoom:hover{
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
