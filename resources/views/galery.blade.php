@@ -44,7 +44,7 @@
 			<hr class="hr-home">
 		</div>
 
-		<div class="container">
+		<div class="container kategori">
 			<?php if($kategori== "Arsitektur"): ?>
 			<a class="btn btn-outline-secondary mb-4" href="/galery"> All</a>
 			<a class="btn btn-info mb-4" href="?kategori=Arsitektur"> Arsitektur</a>

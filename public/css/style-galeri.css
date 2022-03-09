@@ -1,7 +1,9 @@
 /******************************************
  * Galery home page
  ******************************************/
-
+.kategori a{
+	font-size: 12px;
+}
 .arrow{
   font-family:'Spartan', sans-serif;
   color: #424242;
