@@ -45,29 +45,29 @@
 		</div>
 
 		<div class="container">
-			<?php if($kategori== "interior"): ?>
+			<?php if($kategori== "Arsitektur"): ?>
 			<a class="btn btn-outline-secondary mb-4" href="/galery"> All</a>
-			<a class="btn btn-info mb-4" href="?kategori=interior"> Interior</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=eksterior"> Eksterior</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=komersial"> komersial</a>
+			<a class="btn btn-info mb-4" href="?kategori=Arsitektur"> Arsitektur</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Interior"> Interior</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Pembangunan"> Pembangunan</a>
 
-			<?php elseif($kategori== "eksterior"): ?>
+			<?php elseif($kategori== "Interior"): ?>
 			<a class="btn btn-outline-secondary mb-4" href="/galery"> All</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=interior"> Interior</a>
-			<a class="btn btn-info mb-4" href="?kategori=eksterior"> Eksterior</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=komersial"> komersial</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Arsitektur"> Arsitektur</a>
+			<a class="btn btn-info mb-4" href="?kategori=Interior"> Interior</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Pembangunan"> Pembangunan</a>
 
-			<?php elseif($kategori== "komersial"): ?>
+			<?php elseif($kategori== "Pembangunan"): ?>
 			<a class="btn btn-outline-secondary mb-4" href="/galery"> All</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=interior"> Interior</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=eksterior"> Eksterior</a>
-			<a class="btn btn-info mb-4" href="?kategori=komersial"> komersial</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Arsitektur"> Arsitektur</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Interior"> Interior</a>
+			<a class="btn btn-info mb-4" href="?kategori=Pembangunan"> Pembangunan</a>
 			
 			<?php else:?>
 			<a class="btn btn-secondary mb-4" href="/galery"> All</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=interior"> Interior</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=eksterior"> Eksterior</a>
-			<a class="btn btn-outline-info mb-4" href="?kategori=komersial"> komersial</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Arsitektur"> Arsitektur</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Interior"> Interior</a>
+			<a class="btn btn-outline-info mb-4" href="?kategori=Pembangunan"> Pembangunan</a>
 			<?php endif ?>
 		</div>
 		<div class="row">
@@ -174,12 +174,20 @@
 		</div>
 	</div>
 @include('layout.foot')
+<div class="preloading">
+	<div class="textpreload">
+		<img src="{{asset('image/load.gif') }}" alt="" srcset="">
+	</div>
+</div> 
 @endsection
 
 @section('script')
 <!-- <script src="{{ asset('js/lightbox.js') }}"></script> -->
 
 <script type="text/javascript">
+	window.onload = function() {
+		document.getElementsByClassName('preloading')[0].style.display = 'none';
+	}
 
 	// Pause video when sliding
 	$('#media-carousel').on('slide.bs.carousel', function () {

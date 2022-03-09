@@ -4,7 +4,7 @@
 @section('nav')
 	<nav class="navbar navbar-expand-lg fixed-top navbar-light "  id=scrolls>
 		<a class="navbar-brand ml-3" href="#">
-			<img src="{{ asset('image/logo1.png') }}"    class="nav" alt="" id=img-scroll>
+			<img src="{{ asset('image/logo1.png') }}"    class="nav" alt="" id="img-scroll">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
@@ -44,7 +44,7 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active parent">
 				<div class="layer"></div>
-				<img src="{{asset('image/interior.jpg') }}" class="d-block banner" alt="...">
+				<img src="{{asset('image/interior2.jpg') }}" class="d-block banner" alt="...">
 			</div>
 			<div class="carousel-item parent">
 				<div class="layer"></div>
@@ -537,12 +537,19 @@
 	</a>
 
 @include('layout.foot')
+<div class="preloading">
+	<div class="textpreload">
+		<img src="{{asset('image/load.gif') }}" alt="" srcset="">
+	</div>
+</div> 
 @endsection
 
 @section('script')
 
 <script>
-	
+	window.onload = function() {
+		document.getElementsByClassName('preloading')[0].style.display = 'none';
+	}
 	// message time
 	setTimeout(() => {
 		document.getElementById('msg').removeAttribute("hidden");

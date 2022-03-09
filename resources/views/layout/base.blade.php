@@ -34,7 +34,7 @@
 
 @yield('nav')
   
-	<!-- --jumbotro-- -->
+	<!-- jumbotro -->
 @yield('jumbotron')
 	
 @yield('container')

@@ -90,34 +90,35 @@
           <h2 class="my-4 "> Dashboard</h2>
         </div>
       
-          <?php 
-              $gambar = 0;
-              $video = 0;
-              $file = 0;
-          ?>
-          @foreach($data as $data_file)
-          <?php $file++ ?>
-            @if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
-              <?php  $gambar++; ?>
+        <?php 
+            $gambar = 0;
+            $video = 0;
+            $file = 0;
+        ?>
+        @foreach($data as $data_file)
+        <?php $file++ ?>
+          @if ($data_file->type =='jpg' || $data_file->type =='png' || $data_file->type =='jpeg')
+            <?php  $gambar++; ?>
+          @endif
+          @if($data_file->type =='mp4' || $data_file->type =='3gp') 
+            <?php  $video++; ?>
             @endif
-            @if($data_file->type =='mp4' || $data_file->type =='3gp') 
-              <?php  $video++; ?>
-              @endif
-          @endforeach
-          <div class="row ">
-              <div class="admin-padding" id="file-index">
-                <p  >{{$file}}</p>
-                <h6>File</h6>
-            </div>
-              <div class="admin-padding"   id="gambar">
-                <p  >{{$gambar}}</p>
-                <h6>Gambar</h6>
-            </div>
-              <div class="admin-padding "   id="video">
-                <p >{{$video}}</p>
-                <h6>Video</h6>
-            </div>
+        @endforeach
+
+        <div class="row ">
+          <div class="admin-padding" id="file-index">
+          <p  >{{$file}}</p>
+          <h6>File</h6>
+        </div>
+        <div class="admin-padding"   id="gambar">
+          <p  >{{$gambar}}</p>
+          <h6>Gambar</h6>
+        </div>
+        <div class="admin-padding "   id="video">
+          <p >{{$video}}</p>
+          <h6>Video</h6>
           </div>
+        </div>
           <!-- chart -->
 
         <div class="my-5 chart-admin">
@@ -125,8 +126,9 @@
         </div>
       </div>
       
-@include('layout.foot')
+      @include('layout.foot')
 
+    </div>
   </div>
 @endsection
 
