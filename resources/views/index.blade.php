@@ -78,7 +78,7 @@
 			</div>
 			<div class="row my-3">
 				<div class="col-sm-3">
-					<img src="{{asset('image/logo1.png') }}" class="img-fluid" alt="" width=350 height=350>
+					<img src="{{asset('image/logo1.png') }}" class="img-fluid" alt="" width=340 height=340>
 				</div>
 				<div class="col-sm-4 quote mb-3">
 					<blockquote>Berpengalaman lebih dari <strong>satu dekade</strong>, dalam dunia desain & pembangunan. Bekerja dengan tim yang profesional, layanan 24 jam, terpercaya dan berkualitas.</blockquote>
@@ -86,13 +86,15 @@
 				<div class="col-sm-5 profile">   
 					<p>Migunani Architect Studio, merupakan studio desain arsitektur & interior online berbasis di yogyakarta. Dengan pengalaman lebih dari satu dekade dalam perancangan bangunan maupun pembangunan. Meliputi, Desain/pembangunan ‘Residential’ seperti Rumah, Villa, Resort, Guest House. Maupun ‘Commercial Building’ seperti Cafe, Restaurant, Bar, dan bangunan lainnya dengan jangkauan wilayah mencakup seluruh Indonesia. Dikerjakan oleh tim profesional yang berpengalaman kami mengutamakan ketepatan dan kecepatan dalam pengerjaan setiap projectnya. Guna mengakomodir kebutuhan klien semaksimal mungkin.</p>
 				</div>
-			</div>
-			<div class="row" >
-					<div class="col-sm-12 text-center">
-						<h4 >Pelayanan</h4>
-						<hr class="hr-home">
+			</div>	
+			<div class="container "> 
+				<div class="row" >
+						<div class="col-sm-12 text-center">
+							<h4 >Pelayanan</h4>
+							<hr class="hr-home">
+					</div>
 				</div>
-			</div>
+			<div class="container "> 
 			<div class="row text-center">
 				<div class="col-md-4 ">
 					<img src="{{ asset('image/interior2.jpg') }}" class="content_img">
@@ -116,10 +118,12 @@
 		</div>
 	</section>
 	<section>
-		<div class="row" >
-			<div class="col-sm-12 text-center mt-5">
-				<h3><strong>Galeri</strong></h3>
-				<hr class="hr-home">
+		<div class="container "> 
+			<div class="row" >
+				<div class="col-sm-12 text-center mt-5">
+					<h3><strong>Galeri</strong></h3>
+					<hr class="hr-home">
+				</div>
 			</div>
 		</div>
 		<div class=" mb-5">
@@ -246,10 +250,12 @@
 	</section>
 
 	<section class="layer-gray" id="harga">
-		<div class="row" >
-			<div class="col-sm-12 text-center mt-5">
-				<h3><strong>Harga</strong></h3>
-				<hr class="hr-home">
+		<div class="container "> 
+			<div class="row" >
+				<div class="col-sm-12 text-center mt-5">
+					<h3><strong>Harga</strong></h3>
+					<hr class="hr-home">
+				</div>
 			</div>
 		</div>
 		<div class="container">	
@@ -408,12 +414,14 @@
 		</div>
 	</section>
 	<section class="mb-4" id="tentang">
-		<div class="row" >
-			<div class="col-sm-12 text-center mt-5">
-				<h3><strong>Tentang</strong></h3>
-				<hr class="hr-home">
+		<div class="container "> 
+			<div class="row" >
+				<div class="col-sm-12 text-center mt-5">
+					<h3><strong>Tentang</strong></h3>
+					<hr class="hr-home">
+				</div>
 			</div>
-		</div>
+	</div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
