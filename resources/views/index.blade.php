@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('title',' Home | Migunani ')
+@section('title','migunaniarchitect - Arsitek')
 
 @section('nav')
 	<nav class="navbar navbar-expand-lg fixed-top navbar-light "  id="scrolls">
@@ -80,10 +80,10 @@
 				<div class="col-sm-3">
 					<img src="{{asset('image/logo1.png') }}" class="img-fluid" alt="" width=340 height=340>
 				</div>
-				<div class="col-sm-4 quote mb-3">
+				<div data-nosnippet="true" class="col-sm-4 quote mb-3">
 					<blockquote>Berpengalaman lebih dari <strong>satu dekade</strong>, dalam dunia desain & pembangunan. Bekerja dengan tim yang profesional, layanan 24 jam, terpercaya dan berkualitas.</blockquote>
 				</div>
-				<div class="col-sm-5 profile">   
+				<div  class="col-sm-5 profile">   
 					<p>Migunani Architect Studio, merupakan studio desain arsitektur & interior online berbasis di yogyakarta. Dengan pengalaman lebih dari satu dekade dalam perancangan bangunan maupun pembangunan. Meliputi, Desain/pembangunan ‘Residential’ seperti Rumah, Villa, Resort, Guest House. Maupun ‘Commercial Building’ seperti Cafe, Restaurant, Bar, dan bangunan lainnya dengan jangkauan wilayah mencakup seluruh Indonesia. Dikerjakan oleh tim profesional yang berpengalaman kami mengutamakan ketepatan dan kecepatan dalam pengerjaan setiap projectnya. Guna mengakomodir kebutuhan klien semaksimal mungkin.</p>
 				</div>
 			</div>	

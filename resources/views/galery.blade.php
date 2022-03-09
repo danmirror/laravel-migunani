@@ -1,6 +1,6 @@
 @extends('layout.base')
 
-@section('title','Gallery | Migunani')
+@section('title','migunaniarchitect - Arsitek')
 @section('link')
 <link rel="stylesheet" href="{{ asset('css/style-galeri.css') }}" >
 @endsection

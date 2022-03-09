@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	
 	<meta name="author" content="Danu andrean">
-	<meta name="description" content="migunani website">
-	<meta name="keywords" content="architecture jasa arsitek">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="description" content="Migunani architect adalah jasa di bidang bangunan baik hunian maupun bangunan komersil. Kami melayani jasa di bidang desain dan pelasanaan, interior, eksterior dan landscape. Kami berkomitmen untuk selalu memberikan yang terbaik bagi semua pelanggan." />
 
-	<!-- title -->
+	<meta name="googlebot" content="max-image-preview:large">
 	<title>@yield('title')</title>
+	<!-- title -->
 
 	<link rel="shortcut icon"  href="{{asset('image/logo1.png') }}" >
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
