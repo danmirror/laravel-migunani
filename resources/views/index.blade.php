@@ -536,7 +536,7 @@
       <p class="my-1 mx-1">Silahkan konsultasi dengan kami...</p>
 	</div>
 	<div id="promo" hidden>
-      <p class="my-1 mx-1">Dapatkan <b>promo</b> menarik dari kami!</p>
+      <p class="my-1 mx-1">Dapatkan <b>penawaran</b> menarik dari kami!</p>
 	</div>
 	<a href="https://api.whatsapp.com/send?phone=6285225832895" id="fixedbutton">
 		<svg class="icon-redirect" viewBox="0 0 24 24">
