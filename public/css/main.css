@@ -20,7 +20,8 @@
   .preloading .textpreload {
   display: table-cell; 
   text-align: center; 
-  vertical-align: middle;}
+  vertical-align: middle;
+}
   
 html {
   scroll-behavior: smooth;
@@ -31,7 +32,7 @@ html, body {
 
 h1,h2,h3,h4,h5{
   font-family: 'Spartan', sans-serif;
-  color:rgb(139, 139, 139);
+  color:rgb(100, 100, 100);
 }
 
 .msg{

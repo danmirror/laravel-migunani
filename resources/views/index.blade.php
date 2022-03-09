@@ -2,7 +2,7 @@
 @section('title',' Home | Migunani ')
 
 @section('nav')
-	<nav class="navbar navbar-expand-lg fixed-top navbar-light "  id=scrolls>
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light "  id="scrolls">
 		<a class="navbar-brand ml-3" href="#">
 			<img src="{{ asset('image/logo1.png') }}"    class="nav" alt="" id="img-scroll">
 		</a>

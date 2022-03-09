@@ -6,9 +6,9 @@
 @endsection
 
 @section('nav')
-	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light"  id=scrolls>
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light"  id="scrolls">
 		<a class="navbar-brand ml-3" href="#">
-			<img src="{{ asset('image/logo1.png') }}" class="nav-galery" alt="" id=img-scroll>
+			<img src="{{ asset('image/logo1.png') }}" class="nav-galery" alt="" id="img-scroll">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
