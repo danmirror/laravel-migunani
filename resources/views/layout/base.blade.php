@@ -23,7 +23,9 @@
 	<!-- login -->
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 	<script src='http://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182'></script>
-		
+	
+	<!-- pdfviewer -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
 
 	<link rel="stylesheet" href="{{asset('css/main.css') }}" >
 

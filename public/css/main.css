@@ -6,6 +6,7 @@
 @import url("/css/burger.css");
 @import url("/css/style-galeri.css");
 @import url("/css/accordion.css");
+@import url("/css/pdf.css");
 
 .preloading {width: 100%; 
   text-align: center;
@@ -168,8 +169,8 @@ p{
   }
   
   .content_img{
-    width: 300px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 5%;
   }
 	.banner{
@@ -208,8 +209,8 @@ p{
     margin-top: -5px;
   }
   .content_img{
-    width: 300px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 5%;
   }
   .hr-home{

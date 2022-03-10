@@ -44,15 +44,11 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active parent">
 				<div class="layer"></div>
-				<img src="{{asset('image/interior2.jpg') }}" class="d-block banner" alt="...">
+				<img src="{{asset('image/slide.JPG') }}" class="d-block banner" alt="...">
 			</div>
 			<div class="carousel-item parent">
 				<div class="layer"></div>
-				<img src="{{asset('image/4.png') }}" class="d-block banner" alt="...">
-			</div>
-			<div class="carousel-item parent">
-				<div class="layer"></div>
-				<img src="{{asset('image/5.png') }}" class="d-block banner" alt="...">
+				<img src="{{asset('image/slide2.PNG') }}" class="d-block banner" alt="...">
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -97,19 +93,19 @@
 			</div> 
 			<div class="row text-center">
 				<div class="col-md-4 ">
-					<img src="{{ asset('image/interior2.jpg') }}" class="content_img">
+					<img src="{{ asset('image/simbul desain arsitektur.png') }}" class="content_img">
 					<h6>Desain Arsitektur</h6>
 					<p class="describe-service">Jasa Desain Arsitektur baik ‘Residential’ maupun ‘Commercial Building’ meliputi Rumah Tinggal, Villa, Cafe, Restaurant, Indekost dan lain-lain.</p>
 						
 				</div>
 				<div class="col-md-4 ">
-					<img src="{{ asset('image/interior3.jpg') }}" class="content_img">
+					<img src="{{ asset('image/simbul interior.png') }}" class="content_img">
 					<h6>Desain Interior</h6>
 					<p class="describe-service">Jasa Desain Interior meliputi bangunan hunian maupun komersial dengan berbagai macam konsep seperti : Minimalis, Rustic, Classic, Tropical.</p>
 							
 				</div>
 				<div class="col-md-4 ">
-					<img src="{{ asset('image/modern.jpg') }}" class="content_img">
+					<img src="{{ asset('image/simbul pembangunan.png') }}" class="content_img">
 					<h6>Pembangunan</h6>
 					<p class="describe-service">Jasa Pembangunan baik ‘Residential’ maupun ‘Commercial Building’ meliputi Rumah Tinggal, Villa, Cafe, Restaurant, Indekost dan Dikerjakan oleh Tim profesional dengan pengalaman lebih dari satu dekade.</p>
 							
@@ -386,7 +382,7 @@
 							<li>
 								<a href="#paket4" data-toggle="collapse" class="dropdown-toggle">Soft file Dokumen(RAB)</a>
 								<ul class="collapse" id="paket4">
-									<li>Contoh pdf RAB</li>
+									<li><a href="{{route('view')}}" target="_blank">Contoh pdf RAB</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -465,7 +461,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="image-footer">
-						<img src="{{asset('image/XXXagatra-coffee-jogja.jpg') }}" alt="Avatar" >
+						<img src="{{asset('image/slide.JPG') }}" alt="Avatar" >
 					</div>
 				</div>
 			</div>

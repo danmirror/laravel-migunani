@@ -15,9 +15,12 @@
 //     return view('welcome');
 // });
 
-Route::get('/','DataController@index');
+Route::get('/','DataController@index')->name('home');
 Route::get('/galery','DataController@galery');
-Route::get('/about','DataController@about');
+Route::get('/view','DataController@view')->name('view');
+Route::get('/download','DataController@download')->name('download');
+
+
 Route::get('/admin','DataController@admin');
 Route::get('admin/overview','DataController@overview');
 Route::get('/admin/create','DataController@create');

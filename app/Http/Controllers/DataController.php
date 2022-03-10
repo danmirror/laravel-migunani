@@ -62,9 +62,9 @@ class DataController extends Controller
             'kategori' => $cari
         ]);
     }
-    public function about(Request $request)
+    public function view(Request $request)
     {   
-        return view('/about');
+        return view('/view');
     }
 
     /**
@@ -199,5 +199,11 @@ class DataController extends Controller
         // delete data
         data::destroy($data->id);
         return redirect('/admin/overview')->with('status','Data berhasil dihapus');
+    }
+
+    public function download(Request $request)
+    {
+        $file_path ='document/RAB Rumah Tinggal 2 lantai.pdf';
+        return response()->download($file_path);
     }
 }
