@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\user;
 use App\data;
+use App\price;
 use File;
 
 // use Illuminate\Http\File;
@@ -206,4 +207,30 @@ class DataController extends Controller
         $file_path ='document/RAB Rumah Tinggal 2 lantai.pdf';
         return response()->download($file_path);
     }
+
+
+	public function setting(Request $request)
+	{
+		$data = price::all();
+
+		return view('admin.setting',compact($data));
+	}
+
+	public function setting_update(Request $request)
+	{
+		
+		$data = price::find($request->id);
+		if($data){
+			dd($request->all());
+		}
+		else{
+			price::Create([
+				'id' => $request->id,
+				'number' => 1,
+				'price' => $request->price1,
+				'promo'	=> 0,
+				'ispromo' => 0,
+			]);
+		}
+	}
 }

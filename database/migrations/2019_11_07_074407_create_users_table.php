@@ -13,14 +13,14 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('data', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('judul');
-            $table->string('file');
-            $table->string('kategori');
-            $table->string('type');
-            $table->timestamps();
-        });
+        // Schema::create('data', function (Blueprint $table) {
+        //     $table->bigIncrements('id');
+        //     $table->string('judul');
+        //     $table->string('file');
+        //     $table->string('kategori');
+        //     $table->string('type');
+        //     $table->timestamps();
+        // });
         
     }
 
@@ -31,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('data');
+        // Schema::dropIfExists('data');
     }
 }

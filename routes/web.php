@@ -28,6 +28,8 @@ Route::post('/admin/kirim','DataController@store');
 Route::get('admin/{data}/edit','DataController@edit');
 Route::patch('/admin/{data}','DataController@update');
 Route::delete('/admin/{data}', 'DataController@destroy');
+Route::get('/admin/setting','DataController@setting');
+Route::post('/admin/setting/post','DataController@setting_update')->name('setting-update');
 
 
 Route::get('/login','UserController@index');
