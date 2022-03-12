@@ -27,9 +27,11 @@ class DataController extends Controller
         $cari = $request->cari;
         $data = data::where('judul','like',"%".$cari."%")->orderBy('id','DESC')->paginate(12);
         $data_price = price::all();
+        $check = price::where('number',1)->first();
         return view('index',[
             'data' => $data,
-            'data_price' =>$data_price
+            'data_price' =>$data_price,
+            'check' => $check,
         ]);
     }
     public function admin(Request $request)
@@ -214,9 +216,13 @@ class DataController extends Controller
 	public function setting(Request $request)
 	{
 		$data = price::all();
+        $check = price::where('number',1)->first();
         // dd($data);
 
-		return view('admin.setting',compact('data'));
+		return view('admin.setting',[
+            'data' => $data,
+            'check' => $check,
+        ]);
 	}
 
 	public function setting_update(Request $request)

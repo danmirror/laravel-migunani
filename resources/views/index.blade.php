@@ -9,6 +9,13 @@ foreach($data_price as $alldata){
 	${'promo'.$alldata->number} = $alldata->promo;
 	${'ispromo'.$alldata->number} = $alldata->ispromo;
 }
+if(!$check){
+	for($i=1; $i<=4; $i++){
+		${'price'.$i} ="";
+		${'promo'.$i} ="";
+		${'ispromo'.$i} ="";
+	}
+}
 ?>
 @section('nav')
 	<nav class="navbar navbar-expand-lg fixed-top navbar-light "  id="scrolls">

@@ -13,6 +13,15 @@
 		${'ispromo'.$alldata->number} = $alldata->ispromo;
 	}
 
+	if(!$check){
+		for($i=1; $i<=4; $i++){
+			${'price'.$i} ="";
+			${'promo'.$i} ="";
+			${'ispromo'.$i} ="";
+		}
+
+	}
+
 ?>
  
    
