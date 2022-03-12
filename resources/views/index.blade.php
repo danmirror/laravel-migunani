@@ -1,6 +1,15 @@
 @extends('layout.base')
 @section('title','migunaniarchitect - Arsitek')
 
+
+<?php
+
+foreach($data_price as $alldata){
+	${'price'.$alldata->number} = $alldata->price;
+	${'promo'.$alldata->number} = $alldata->promo;
+	${'ispromo'.$alldata->number} = $alldata->ispromo;
+}
+?>
 @section('nav')
 	<nav class="navbar navbar-expand-lg fixed-top navbar-light "  id="scrolls">
 		<a class="navbar-brand ml-3" href="#">
@@ -261,7 +270,12 @@
 						<div class="container-paket">
 							<h5 class="paket">Paket 1 </h5>
 						</div>
-						<h5 class="text-center"><strong>Rp 15.000</strong></h5>
+@if($ispromo1=="on")
+						<h5 class="text-center decoration"><strong>Rp {{$price1}}</strong></h5>
+						<h5 class="text-center"><strong>Rp {{$promo1}}</strong></h5>
+@else
+						<h5 class="text-center"><strong>Rp {{$price1}}</strong></h5>
+@endif
 						<ul class="list-unstyled">
 							<li>
 								<a href="#paket1" data-toggle="collapse" class="dropdown-toggle">Gambar Kerja (Detail Design)</a>
@@ -285,7 +299,12 @@
 						<div class="container-paket">
 							<h5 class="paket">Paket 2</h5>
 						</div>
-						<h5 class="text-center"><strong>Rp 30.000</strong></h5>
+@if($ispromo2=="on")
+						<h5 class="text-center decoration"><strong>Rp {{$price2}}</strong></h5>
+						<h5 class="text-center"><strong>Rp {{$promo2}}</strong></h5>
+@else
+						<h5 class="text-center"><strong>Rp {{$price2}}</strong></h5>
+@endif
 						<ul class="list-unstyled">
 							<li>
 								<a href="#paket2" data-toggle="collapse" class="dropdown-toggle">Gambar Kerja</a>
@@ -325,7 +344,12 @@
 						<div class="container-paket">
 							<h5 class="paket">Paket 3</h5>
 						</div>
-						<h5 class="text-center"><strong>Rp 80.000</strong></h5>
+@if($ispromo3=="on")
+						<h5 class="text-center decoration"><strong>Rp {{$price3}}</strong></h5>
+						<h5 class="text-center"><strong>Rp {{$promo3}}</strong></h5>
+@else
+						<h5 class="text-center"><strong>Rp {{$price3}}</strong></h5>
+@endif
 						<ul class="list-unstyled">
 							<li>
 								<a href="#paket3" data-toggle="collapse" class="dropdown-toggle">Gambar Kerja (Detail Design)</a>
@@ -376,7 +400,12 @@
 						<div class="container-paket">
 							<h5 class="paket">Paket 4 </h5>
 						</div>
-						<h5 class="text-center"><strong>Rp 15.000</strong></h5>
+@if($ispromo4=="on")
+						<h5 class="text-center decoration"><strong>Rp {{$price4}}</strong></h5>
+						<h5 class="text-center"><strong>Rp {{$promo4}}</strong></h5>
+@else
+						<h5 class="text-center"><strong>Rp {{$price4}}</strong></h5>
+@endif
 						<ul class="list-unstyled">
 							<li>
 								<a href="#paket4" data-toggle="collapse" class="dropdown-toggle">Soft file Dokumen(RAB)</a>

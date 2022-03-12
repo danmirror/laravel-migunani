@@ -26,8 +26,10 @@ class DataController extends Controller
     {
         $cari = $request->cari;
         $data = data::where('judul','like',"%".$cari."%")->orderBy('id','DESC')->paginate(12);
+        $data_price = price::all();
         return view('index',[
-            'data' => $data
+            'data' => $data,
+            'data_price' =>$data_price
         ]);
     }
     public function admin(Request $request)
@@ -212,25 +214,42 @@ class DataController extends Controller
 	public function setting(Request $request)
 	{
 		$data = price::all();
+        // dd($data);
 
-		return view('admin.setting',compact($data));
+		return view('admin.setting',compact('data'));
 	}
 
 	public function setting_update(Request $request)
 	{
-		
-		$data = price::find($request->id);
+        $this->validate($request, [
+            "price1" => "required|numeric",
+            "price2" => "required|numeric",
+            "price3" => "required|numeric",
+            "price4" => "required|numeric",
+        ]);
+		// dd($request->all());
+		$data = price::where('number',1)->first();
+
 		if($data){
-			dd($request->all());
+            for($i=1; $i<=4; $i++){
+                $data_update = price::where("number",$i)->first();
+                $data_update->price = $request['price'.$i];
+                $data_update->promo = $request['promo'.$i];
+                $data_update->ispromo = $request['checkbox'.$i];
+                $data_update->save();
+            }
+            return redirect('/admin/setting')->with('status','price update');
 		}
 		else{
-			price::Create([
-				'id' => $request->id,
-				'number' => 1,
-				'price' => $request->price1,
-				'promo'	=> 0,
-				'ispromo' => 0,
-			]);
+            for($i=1; $i<=4; $i++){
+                $data = new price;
+                $data->number = $i;
+                $data->price = $request['price'.$i];
+                $data->promo = $request['promo'.$i];
+                $data->ispromo = $request['checkbox'.$i];
+                $data->save();
+            }
+            return redirect('/admin/setting')->with('status','price setting');
 		}
 	}
 }

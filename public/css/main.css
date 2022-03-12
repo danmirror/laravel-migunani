@@ -8,6 +8,13 @@
 @import url("/css/accordion.css");
 @import url("/css/pdf.css");
 
+
+.text-center.decoration{
+  text-decoration: line-through;
+  -webkit-text-decoration-color: red;
+  text-decoration-color: red;
+  text-decoration-thickness: 2px;
+}
 .preloading {width: 100%; 
   text-align: center;
   height: 100%;

@@ -7,6 +7,11 @@
 <?php
 
 
+	foreach($data as $alldata){
+		${'price'.$alldata->number} = $alldata->price;
+		${'promo'.$alldata->number} = $alldata->promo;
+		${'ispromo'.$alldata->number} = $alldata->ispromo;
+	}
 
 ?>
  
@@ -44,7 +49,7 @@
 				</a>
 				<a href="/admin/setting" class="list-group-item list-group-item-action icon-sidebar sidebar-color-active">
 					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
-					<path fill="currentColor" d="M12 14C9.58 14 7.3 13.4 6 12.45V9.64C7.47 10.47 9.61 11 12 11S16.53 10.47 18 9.64V12.08C18.33 12.03 18.66 12 19 12C19.34 12 19.67 12.03 20 12.08V7C20 4.79 16.42 3 12 3S4 4.79 4 7V17C4 19.21 7.59 21 12 21C12.1 21 12.2 21 12.29 21C12.11 20.36 12 19.69 12 19C8.13 19 6 17.5 6 17V14.77C7.61 15.55 9.72 16 12 16C12.24 16 12.47 16 12.7 15.97C13.1 15.14 13.65 14.41 14.32 13.81C13.58 13.93 12.8 14 12 14M12 5C15.87 5 18 6.5 18 7S15.87 9 12 9 6 7.5 6 7 8.13 5 12 5M22.7 19.6V18.6L23.8 17.8C23.9 17.7 24 17.6 23.9 17.5L22.9 15.8C22.9 15.7 22.7 15.7 22.6 15.7L21.4 16.2C21.1 16 20.8 15.8 20.5 15.7L20.3 14.4C20.3 14.3 20.2 14.2 20.1 14.2H18.1C17.9 14.2 17.8 14.3 17.8 14.4L17.6 15.7C17.3 15.9 17.1 16 16.8 16.2L15.6 15.7C15.5 15.7 15.4 15.7 15.3 15.8L14.3 17.5C14.3 17.6 14.3 17.7 14.4 17.8L15.5 18.6V19.6L14.4 20.4C14.3 20.5 14.2 20.6 14.3 20.7L15.3 22.4C15.4 22.5 15.5 22.5 15.6 22.5L16.8 22C17 22.2 17.3 22.4 17.6 22.5L17.8 23.8C17.9 23.9 18 24 18.1 24H20.1C20.2 24 20.3 23.9 20.3 23.8L20.5 22.5C20.8 22.3 21 22.2 21.3 22L22.5 22.4C22.6 22.4 22.7 22.4 22.8 22.3L23.8 20.6C23.9 20.5 23.9 20.4 23.8 20.4L22.7 19.6M19 20.5C18.2 20.5 17.5 19.8 17.5 19S18.2 17.5 19 17.5 20.5 18.2 20.5 19 19.8 20.5 19 20.5Z" />
+							<path fill="currentColor" d="M8 13C6.14 13 4.59 14.28 4.14 16H2V18H4.14C4.59 19.72 6.14 21 8 21S11.41 19.72 11.86 18H22V16H11.86C11.41 14.28 9.86 13 8 13M8 19C6.9 19 6 18.1 6 17C6 15.9 6.9 15 8 15S10 15.9 10 17C10 18.1 9.1 19 8 19M19.86 6C19.41 4.28 17.86 3 16 3S12.59 4.28 12.14 6H2V8H12.14C12.59 9.72 14.14 11 16 11S19.41 9.72 19.86 8H22V6H19.86M16 9C14.9 9 14 8.1 14 7C14 5.9 14.9 5 16 5S18 5.9 18 7C18 8.1 17.1 9 16 9Z" />
 					</svg>
 					Setting
 				</a>
@@ -86,38 +91,106 @@
 
 			<div class="content-admin create">
 				<div class="container-fluid  my-3">
-
-					@if (session('status'))
-					<div class="alert alert-primary">
-					{{ session('status') }}
-					</div>
-					@endif  
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
 							<li class="breadcrumb-item">Setting</li>
 						</ol>
 					</nav>
+					@if (session('status'))
+					<div class="alert alert-primary">
+					{{ session('status') }}
+					</div>
+					@endif  
 					<h2 >Setting</h2>
 					<div class="container shadow">
 						<form action="{{route('setting-update')}}" method="post">
 							@csrf
-							<div class="form-group">
-								<label for="price1">Harga 1</label>
-								<input name="price1" type="text" class="form-control" id="price1" aria-describedby="textHelp">
+							<div class="row">
+								<div class="col-md">
+									<div class="form-group">
+										<label for="price1">Harga 1</label>
+										<input placeholder="Rp." name="price1" type="text" class="form-control" id="price1" aria-describedby="textHelp" value="{{$price1}}">
+									</div>
+								</div>
+								<div class="col-md">
+									<div class="form-group">
+										<label for="promo1">Promo 1</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+												<input name="checkbox1" type="checkbox" id="checkbox1">
+												</div>
+											</div>
+											<input placeholder="Rp." name="promo1" type="text" class="form-control" id="promo1" aria-describedby="textHelp" value="{{$promo1}}">
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="price2">Harga 2</label>
-								<input name="price2" type="text" class="form-control" id="price2" aria-describedby="textHelp">
+							<div class="row">
+								<div class="col-md">
+									<div class="form-group">
+										<label for="price2">Harga 2</label>
+										<input placeholder="Rp."  name="price2" type="text" class="form-control" id="price2" aria-describedby="textHelp" value="{{$price2}}">
+									</div>
+								</div>
+								<div class="col-md">
+									<div class="form-group">
+									<label for="promo2">Promo 2</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+												<input name="checkbox2" type="checkbox" id="checkbox2">
+												</div>
+											</div>
+											<input placeholder="Rp." name="promo2" type="text" class="form-control" id="promo2" aria-describedby="textHelp" value="{{$promo2}}">
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="price3">Harga 3</label>
-								<input name="price3" type="text" class="form-control" id="price3" aria-describedby="textHelp">
+							<div class="row">
+								<div class="col-md">
+									<div class="form-group">
+										<label for="price3">Harga 3</label>
+										<input placeholder="Rp." name="price3" type="text" class="form-control" id="price3" aria-describedby="textHelp" value="{{$price3}}">
+									</div>
+								</div>
+								<div class="col-md">
+									<div class="form-group">
+									<label for="promo3">Promo 3</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+												<input name="checkbox3" type="checkbox" id="checkbox3">
+												</div>
+											</div>
+											<input placeholder="Rp." name="promo3" type="text" class="form-control" id="promo3" aria-describedby="textHelp" value="{{$promo3}}">
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="price4">Harga 4</label>
-								<input name="price4" type="text" class="form-control" id="price4" aria-describedby="textHelp">
+							<div class="row">
+								<div class="col-md">
+									<div class="form-group">
+										<label for="price4">Harga 4</label>
+										<input placeholder="Rp." name="price4" type="text" class="form-control" id="price4" aria-describedby="textHelp" value="{{$price4}}">
+									</div>
+								</div>
+								<div class="col-md">
+									<div class="form-group">
+										<label for="promo4">Promo 4</label>
+										<div class="input-group mb-3">
+											<div class="input-group-prepend">
+												<div class="input-group-text">
+												<input name="checkbox4" type="checkbox" id="checkbox4">
+												</div>
+											</div>
+											<input placeholder="Rp." name="promo4" type="text" class="form-control" id="promo4" aria-describedby="textHelp" value="{{$promo4}}">
+										</div>
+									</div>
+								</div>
 							</div>
+							
 						
 							<button type="submit" class="btn btn-primary mb-4">Submit</button>
 						</form>
@@ -135,6 +208,78 @@
 
 @section('script')
 <script>
+	let promo1 = document.getElementById("promo1");
+	let promo2 = document.getElementById("promo2");
+	let promo3 = document.getElementById("promo3");
+	let promo4 = document.getElementById("promo4");
+
+	window.onload = function() {
+		promo1.disabled = true;
+		promo2.disabled = true;
+		promo3.disabled = true;
+		promo4.disabled = true;
+
+		let ispromo1 = "<?= $ispromo1?>";
+		let ispromo2 = "<?= $ispromo2?>";
+		let ispromo3 = "<?= $ispromo3?>";
+		let ispromo4 = "<?= $ispromo4?>";
+
+		if(ispromo1 === "on"){
+			document.getElementById("checkbox1").checked=true;
+			promo1.disabled = false;
+		}
+		if(ispromo2 === "on"){
+			document.getElementById("checkbox2").checked=true;
+			promo2.disabled = false;
+		}
+		if(ispromo3 === "on"){
+			document.getElementById("checkbox3").checked=true;
+			promo3.disabled = false;
+		}
+		if(ispromo4 === "on"){
+			document.getElementById("checkbox4").checked=true;
+			promo4.disabled = false;
+		}
+		// document.getElementById("checkbox1").checked=true;
+	}
+
+	
+
+
+	document.getElementById("checkbox1").addEventListener("click", function(){
+		if(this.checked){
+			promo1.disabled = false;
+		}else{
+			promo1.disabled = true;
+			promo1.value="";
+		}
+	});
+
+	document.getElementById("checkbox2").addEventListener("click", function(){
+		if(this.checked){
+			promo2.disabled = false;
+		}else{
+			promo2.disabled = true;
+			promo2.value="";
+		}
+	});
+	document.getElementById("checkbox3").addEventListener("click", function(){
+		if(this.checked){
+			promo3.disabled = false;
+		}else{
+			promo3.disabled = true;
+			promo3.value="";
+		}
+	});
+	document.getElementById("checkbox4").addEventListener("click", function(){
+		if(this.checked){
+			promo4.disabled = false;
+		}else{
+			promo4.disabled = true;
+			promo4.value="";
+		}
+	});
+
 	$("#sidebarCollapse").click(function(e) {
 		e.preventDefault();
 		$("#wrapper").toggleClass("toggled");
