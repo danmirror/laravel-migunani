@@ -588,12 +588,13 @@ if(!$check){
 <script>
 	// window.onload = function() {
 	// }
+	// pafter loaded
 	//dom
 	window.addEventListener("load", function(){
 		document.getElementsByClassName('preloading')[0].style.display = 'none';
 	});
 
-	document.addEventListener("DOMContentLoaded", function() {
+	window.onload = function() {
 
 		setTimeout(() => {
 			document.getElementById('msg').removeAttribute("hidden");
@@ -612,7 +613,7 @@ if(!$check){
 			document.getElementById('promo').setAttribute("hidden", false);
 			document.getElementById('promo').classList.remove('promo');
 		}, 20000);
-	});
+	}
 		
 
 	if (document.readyState === "complete") {
