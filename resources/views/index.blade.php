@@ -586,9 +586,7 @@ if(!$check){
 @section('script')
 
 <script>
-	// window.onload = function() {
-	// }
-	// pafter loaded
+	
 	//dom
 	window.addEventListener("load", function(){
 		document.getElementsByClassName('preloading')[0].style.display = 'none';
