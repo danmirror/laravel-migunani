@@ -593,27 +593,33 @@ if(!$check){
 		document.getElementsByClassName('preloading')[0].style.display = 'none';
 	});
 
+	document.addEventListener("DOMContentLoaded", function() {
+
+		setTimeout(() => {
+			document.getElementById('msg').removeAttribute("hidden");
+			document.getElementById('msg').classList.add('msg');
+		}, 2000); 
+		setTimeout(() => {
+			document.getElementById('promo').removeAttribute("hidden");
+			document.getElementById('promo').classList.add('promo');
+		}, 8000); 
+
+		setTimeout(() => {
+			document.getElementById('msg').setAttribute("hidden", false);
+			document.getElementById('msg').classList.remove('msg');
+		}, 15000);
+		setTimeout(() => {
+			document.getElementById('promo').setAttribute("hidden", false);
+			document.getElementById('promo').classList.remove('promo');
+		}, 20000);
+	});
+		
+
 	if (document.readyState === "complete") {
  		init();
  	}
 	// message time
-	setTimeout(() => {
-		document.getElementById('msg').removeAttribute("hidden");
-		document.getElementById('msg').classList.add('msg');
-	}, 2000); 
-	setTimeout(() => {
-		document.getElementById('promo').removeAttribute("hidden");
-		document.getElementById('promo').classList.add('promo');
-	}, 8000); 
-
-	setTimeout(() => {
-		document.getElementById('msg').setAttribute("hidden", false);
-		document.getElementById('msg').classList.remove('msg');
-	}, 15000);
-	setTimeout(() => {
-		document.getElementById('promo').setAttribute("hidden", false);
-		document.getElementById('promo').classList.remove('promo');
-	}, 20000);
+	
 
 
 
