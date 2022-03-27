@@ -593,7 +593,9 @@ if(!$check){
 		document.getElementsByClassName('preloading')[0].style.display = 'none';
 	});
 
-	
+	if (document.readyState === "complete") {
+ 		init();
+ 	}
 	// message time
 	setTimeout(() => {
 		document.getElementById('msg').removeAttribute("hidden");
