@@ -9,6 +9,10 @@
 @import url("/css/pdf.css");
 
 
+sub{
+  bottom: 0.50em;
+  font-size: 0.50em;
+}
 .text-center.decoration{
   text-decoration: line-through;
   -webkit-text-decoration-color: red;

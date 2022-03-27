@@ -278,10 +278,10 @@ if(!$check){
 							<h5 class="paket">Paket 1 </h5>
 						</div>
 @if($ispromo1=="on")
-						<h5 class="text-center decoration"><strong>Rp {{$price1}}</strong></h5>
-						<h5 class="text-center"><strong>Rp {{$promo1}}</strong></h5>
+						<h5 class="text-center decoration"><strong>Rp {{$price1}} /m<sub>2</sub></strong></h5>
+						<h5 class="text-center"><strong>Rp {{$promo1}} /m<sub>2</sub></strong></h5>
 @else
-						<h5 class="text-center"><strong>Rp {{$price1}}</strong></h5>
+						<h5 class="text-center"><strong>Rp {{$price1}} /m<sub>2</sub></strong></h5>
 @endif
 						<ul class="list-unstyled">
 							<li>
@@ -307,10 +307,10 @@ if(!$check){
 							<h5 class="paket">Paket 2</h5>
 						</div>
 @if($ispromo2=="on")
-						<h5 class="text-center decoration"><strong>Rp {{$price2}}</strong></h5>
-						<h5 class="text-center"><strong>Rp {{$promo2}}</strong></h5>
+						<h5 class="text-center decoration"><strong>Rp {{$price2}} /m<sub>2</sub></strong></h5>
+						<h5 class="text-center"><strong>Rp {{$promo2}} /m<sub>2</sub></strong></h5>
 @else
-						<h5 class="text-center"><strong>Rp {{$price2}}</strong></h5>
+						<h5 class="text-center"><strong>Rp {{$price2}} /m<sub>2</sub></strong></h5>
 @endif
 						<ul class="list-unstyled">
 							<li>
@@ -352,10 +352,10 @@ if(!$check){
 							<h5 class="paket">Paket 3</h5>
 						</div>
 @if($ispromo3=="on")
-						<h5 class="text-center decoration"><strong>Rp {{$price3}}</strong></h5>
-						<h5 class="text-center"><strong>Rp {{$promo3}}</strong></h5>
+						<h5 class="text-center decoration"><strong>Rp {{$price3}} /m<sub>2</sub></strong></h5>
+						<h5 class="text-center"><strong>Rp {{$promo3}} /m<sub>2</sub></strong></h5>
 @else
-						<h5 class="text-center"><strong>Rp {{$price3}}</strong></h5>
+						<h5 class="text-center"><strong>Rp {{$price3}} /m<sub>2</sub></strong></h5>
 @endif
 						<ul class="list-unstyled">
 							<li>
@@ -408,10 +408,10 @@ if(!$check){
 							<h5 class="paket">Paket 4 </h5>
 						</div>
 @if($ispromo4=="on")
-						<h5 class="text-center decoration"><strong>Rp {{$price4}}</strong></h5>
-						<h5 class="text-center"><strong>Rp {{$promo4}}</strong></h5>
+						<h5 class="text-center decoration"><strong>Rp {{$price4}} /m<sub>2</sub></strong></h5>
+						<h5 class="text-center"><strong>Rp {{$promo4}} /m<sub>2</sub></strong></h5>
 @else
-						<h5 class="text-center"><strong>Rp {{$price4}}</strong></h5>
+						<h5 class="text-center"><strong>Rp {{$price4}} /m<sub>2</sub></strong></h5>
 @endif
 						<ul class="list-unstyled">
 							<li>
