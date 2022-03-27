@@ -586,9 +586,14 @@ if(!$check){
 @section('script')
 
 <script>
-	window.onload = function() {
+	// window.onload = function() {
+	// }
+	//dom
+	window.addEventListener("load", function(){
 		document.getElementsByClassName('preloading')[0].style.display = 'none';
-	}
+	});
+
+	
 	// message time
 	setTimeout(() => {
 		document.getElementById('msg').removeAttribute("hidden");
